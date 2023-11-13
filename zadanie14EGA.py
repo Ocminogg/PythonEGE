@@ -30,13 +30,12 @@
 
 # print(bin(4**511 + 2**511 - 511).count("1"))
 
-for x in '0123456789ABCDE':
-    for y in '0123456789ABCDE':
-        t = int('90' + x + '4' + y, 15) + int('91' + x + y + '2', 16)
-        if t % 56 == 0:
-            print(t // 56)
+for x in '0123456789A':
+    for y in '0123456789A':
+        t = int( x + '341' + y, 11) + int('56' + x + '1' + y, 19)
+        if t % 305 == 0:
+            print(t // 305)
             break
-    if t % 56 == 0:
-        break
-print(int('100010000', 2))
+
+
 
