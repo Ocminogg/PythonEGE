@@ -1,7 +1,7 @@
-# docum = open('27-B_demo.txt').readline()
-# docum = docum.split()
+# docum = open('28130_A.txt').readline()
+# # docum = docum.split()
 # count = int(docum[0])
-# docum = open('27-B_demo.txt').readlines()
+# docum = open('28130_A.txt').readlines()
 # docum.remove(docum[0])
 # raznost = 10000000000
 # SUM = 0
@@ -50,41 +50,41 @@
 # z()
 
 ########### ДЕЛАЛИ НА УРОКЕ В ТЕТРИКЕ #################################
-docum = open("27990_B.txt").readlines()
-# print(docum)
-for i in range(len(docum)):
-    docum[i] = int(docum[i])
-# print(docum)
-N = docum[0]
-docum.remove(docum[0])
-# print(docum)
-COUNT = 0
-Count62 = 0
-Count31 = 0
-Count2 = 0
-for i in range(N):
-    if ((docum[i] % 62) == 0):
-        Count62 +=1
-        docum[i] = -1
-while -1 in docum:
-    docum.remove(-1)
-#####################################
-for i in range(len(docum)):
-    if ((docum[i] % 62) == 0):
-        print(docum[i])
-##############################################
-COUNT = Count62 * (N-1) - Count62
-print(COUNT)
-print(len(docum))
-
-for i in range(len(docum)):
-    if ((docum[i] % 31) == 0):
-        Count31 +=1
-    elif ((docum[i] % 2) == 0):
-        Count2 +=1
-COUNT = (Count31 * Count2) + COUNT
-COUNT = Count62*(Count62 - 1)/2 + Count62*(N-Count62)+Count2*Count31
-print(COUNT)
+# docum = open("27990_B.txt").readlines()
+# # print(docum)
+# for i in range(len(docum)):
+#     docum[i] = int(docum[i])
+# # print(docum)
+# N = docum[0]
+# docum.remove(docum[0])
+# # print(docum)
+# COUNT = 0
+# Count62 = 0
+# Count31 = 0
+# Count2 = 0
+# for i in range(N):
+#     if ((docum[i] % 62) == 0):
+#         Count62 +=1
+#         docum[i] = -1
+# while -1 in docum:
+#     docum.remove(-1)
+# #####################################
+# for i in range(len(docum)):
+#     if ((docum[i] % 62) == 0):
+#         print(docum[i])
+# ##############################################
+# COUNT = Count62 * (N-1) - Count62
+# print(COUNT)
+# print(len(docum))
+#
+# for i in range(len(docum)):
+#     if ((docum[i] % 31) == 0):
+#         Count31 +=1
+#     elif ((docum[i] % 2) == 0):
+#         Count2 +=1
+# COUNT = (Count31 * Count2) + COUNT
+# COUNT = Count62*(Count62 - 1)/2 + Count62*(N-Count62)+Count2*Count31
+# print(COUNT)
 
 ################## Для А
 # for i in range(len(docum)):
@@ -95,3 +95,22 @@ print(COUNT)
 #             COUNT +=1
 #             print(COUNT)
 # print(COUNT)
+
+
+
+
+
+
+docum = open('28130_A.txt').readlines()
+count = 0
+docum.remove(docum[0])
+m = 80
+b = 50
+for i in range(len(docum)):
+    docum[i] = int(docum[i])
+
+for i in range(len(docum)):
+    for j in range(i+1,len(docum)):
+        if (((i+j) % 80) == 0) and ((i > 50) or (j > 50)):
+            count +=1
+print(count)
