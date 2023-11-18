@@ -1,14 +1,16 @@
 from turtle import *
 left(90)
-k = 40
-tracer(8)
+k = 65 # масштаб
+tracer(0) #скорость
 up()
-goto(-5 * k, 0 * k)
+goto(0 * k, 5 * k) #начальное расположение
 down()
-for i in range(6):
-    right(36)
-    forward(10 * k)
-    right(36)
+for i in range(12):
+    right(60)
+    forward(1 * k)
+    right(60)
+    forward(1 * k)
+    right(270)
 up() #Черепаха поднимает хвост
 for x in range(-20, 20):
     for y in range(-20, 20):
