@@ -30,12 +30,17 @@
 
 # print(bin(4**511 + 2**511 - 511).count("1"))
 
-for x in '0123456789A':
-    for y in '0123456789A':
-        t = int( x + '341' + y, 11) + int('56' + x + '1' + y, 19)
-        if t % 305 == 0:
-            print(t // 305)
+# for x in range(5):
+#     print(x)
+
+for x in '0123456789ABC':
+    for y in '0123456789ABC':
+        t = int("8" + x + "78" + y, 13) + int('79' + x + y + '7', 18)
+        if t % 9 == 0:
+            print(t // 9)
             break
+    if t % 9 == 0:
+        break
 
 
 
