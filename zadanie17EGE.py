@@ -1,31 +1,28 @@
-count = 0
-MAXSUM = -1000000
-SUM = 0
-docum = open('17.txt').readlines()
-print (docum)
-
-# x = docum.readlines()
-# print(x)
-# print(int(x[3]))
+# count = 0
+# MAXSUM = -1000000
+# SUM = 0
+# docum = open('17.txt').readlines()
+# # print (docum)
 #
-# l = [int(i) for i in docum]
-# print(l)
+# docum = [int(i) for i in docum]
+# print(docum)
 
-for i in range(len(docum)):
-    docum[i] = int(docum[i])
-print(docum)
+# for i in range(len(docum)):
+#     docum[i] = int(docum[i])
+# print(docum)
+#
 # l = []
 # for element in docum:
 #     l.append(int(element))
 # print(l)
 
-for i in range(len(docum)):
-    for j in range(i+1, len(docum)):
-        if ((docum[i] + docum[j]) % 9 ) == 0:
-            count += 1
-            MAXSUM = max(MAXSUM,docum[i] + docum[j])
-print(f"Максимальная сумма:{MAXSUM} \nКоличество пар элементов {count} ")
-print(MAXSUM, count)
+# for i in range(len(docum)):
+#     for j in range(i+1, len(docum)):
+#         if ((docum[i] + docum[j]) % 9 ) == 0:
+#             count += 1
+#             MAXSUM = max(MAXSUM,docum[i] + docum[j])
+# print(f"Максимальная сумма:{MAXSUM} \nКоличество пар элементов {count} ")
+# print(MAXSUM, count)
 
 
 
@@ -66,3 +63,15 @@ print(MAXSUM, count)
 #             count += 1
 #             m = max(m, l[i] + l[j])
 # print(count, m)
+
+count = 0
+MAXSUM = -1000000
+SUM = 0
+docum = open('17.txt').readlines()
+# print (docum)
+
+docum = [int(i) for i in docum]
+print(docum)
+
+for i in range(1,len(docum)):
+    if str(docum[i-1])
