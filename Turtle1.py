@@ -12,8 +12,8 @@ for i in range(12):
     forward(1 * k)
     right(270)
 up() #Черепаха поднимает хвост
-for x in range(-20, 20):
-    for y in range(-20, 20):
+for x in range(-5, 20):
+    for y in range(-5, 20):
         goto(x * k, y * k)
         dot(3, "red")
         dot(1, "white")

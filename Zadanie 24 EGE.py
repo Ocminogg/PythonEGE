@@ -79,10 +79,26 @@
 # print(bukva)
 
 
-docum = open('inf_22_10_20_24.txt').readlines()
-# print(docum)
-Count = 0
-for i in range(0, len(docum)):
-    if (docum[i].count("A") > docum[i].count("E")):
-        Count += 1
-print(Count)
+# docum = open('inf_22_10_20_24.txt').readlines()
+# # print(docum)
+# Count = 0
+# for i in range(0, len(docum)):
+#     if (docum[i].count("A") > docum[i].count("E")):
+#         Count += 1
+# print(Count)
+
+count = 0
+MAXcount = 0
+docum = open('24.txt').readline()
+i = 0
+while i != (len(docum) - 1):
+    if i < len(docum) - 5: #????
+        propusk = docum[i] + docum[i+1] + docum[i+2]
+    if ("A" in propusk) and ("B" in propusk) and ("C" in propusk):
+        MAXcount = max(MAXcount,count)
+        count = 0
+        i += 3
+    else:
+        count += 1
+        i += 1
+print(MAXcount)

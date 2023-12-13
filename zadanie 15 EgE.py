@@ -101,3 +101,53 @@
 #     if k == 90_000:
 #         print(a)
 #         break
+
+# Не работает 10 номер из решу ЕГЭ
+# for a in range(-7, 20, 1):
+#     Flag = True
+#     for x in range(-7, 20):
+#         for y in range(-7, 20):
+#             if ((x == a) <= (x * x <= 81)) and ((y * y <= 36) <= (y <= a)):
+#                 Flag = True
+#             else:
+#                 Flag = False
+#                 break
+#     if Flag:
+#         print(a)
+
+
+# a = set()
+# def f(x,y,a):
+#     return ((x in a) <= (x**2 <= 81)) and ((y**2 <= 36) <= (y in a))
+#
+# for x in range(-20,20):
+#     for y in range(-20, 20):
+#         if not f(x,y,a):
+#             a.add(x)
+# print(a)
+
+for a in range(0, 125, 1):
+    Flag = True
+    for x in range(0, 100):
+        if Flag:
+            for y in range(0, 100):
+                if (x * y < a) or (x < y) or (x >= 12):
+                    Flag = True
+                else:
+                    Flag = False
+                    break
+        else:
+            break
+    if Flag:
+        print(a)
+        break
+
+# for A in range(300):
+#     k = 0
+#     for x in range(300):
+#         for y in range(300):
+#             if (x * y < A) or (x < y) or (x >= 12):
+#                 k += 1
+#     if k == 90_000:
+#         print(A)
+#         break
