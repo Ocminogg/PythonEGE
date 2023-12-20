@@ -83,18 +83,34 @@
 #         if ((int(Number) % 23) == 0):
 #             print(Number, int(Number) // 23)
 
-def M(N):
-    for i in range(1,N):
-        if ((N%i) == 0):
-            DEL.append(i)
-    if (DEL.count() >= 5):
-        print(DEL[DEL.count() - 4])
-        return 1
-    else:
-        return 0
+# def M(N):
+#     for i in range(1,N):
+#         if ((N%i) == 0):
+#             DEL.append(i)
+#     if (DEL.count() >= 5):
+#         print(DEL[DEL.count() - 4])
+#         return 1
+#     else:
+#         return 0
+#
+# count = 0
+# while count != 5:
+#     number = 460000000
+#     DEL=[]
+#     count += M(number)
 
 count = 0
-while count != 5:
-    number = 460000000
-    DEL=[]
-    count += M(number)
+DEL = []
+for chislo in range(95632,95651):
+    count = 0
+    DEL = []
+    for delitel in range(1,chislo+1):
+        if count > 6:
+            break
+        if ((chislo % delitel) == 0) and (delitel % 2 != 0):
+            count += 1
+            DEL.append(delitel)
+    if count == 6:
+        print("\nDelitel")
+        for i in DEL:
+            print(str(i) , end = " ")

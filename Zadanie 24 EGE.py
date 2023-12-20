@@ -89,32 +89,14 @@
 
 count = 0
 MAXcount = 0
+i = 0
+propusk = ""
+propusk1 = ""
+propusk2 = ""
 docum = open('24.txt').readline()
-i = 0
-s = "TBQBNRBACBAGHILRABC"
 while i != (len(docum) - 1):
-    if i < len(docum) - 2: #????
-        propusk = docum[i] + docum[i+1] + docum[i+2]
-        propusk1 = docum[i - 1] + docum[i] + docum[i + 1]
-        propusk2 = docum[i - 2] + docum[i - 1] + docum[i]
-    if ("A" in propusk,propusk1,propusk2) and ("B" in propusk,propusk1,propusk2) and ("C" in propusk,propusk1,propusk2):
-        MAXcount = max(MAXcount,count)
-        count = 0
-        i += 1
-    else:
-        count += 1
-        i += 1
-print(MAXcount)
-
-count = 0
-MAXcount = 0
-i = 0
-s = "TBQBNRBACBAGHILRABC"
-while i != (len(docum) - 1):
-    if i < len(docum) - 2: #????
+    if i < len(docum) - 2:
         propusk = docum[i] + docum[i + 1] + docum[i + 2]
-        propusk1 = docum[i - 1] + docum[i] + docum[i + 1]
-        propusk2 = docum[i - 2] + docum[i - 1] + docum[i]
         if i > 0:
             propusk1 = docum[i - 1] + docum[i] + docum[i + 1]
         if i > 1:
