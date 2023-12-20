@@ -91,13 +91,38 @@ count = 0
 MAXcount = 0
 docum = open('24.txt').readline()
 i = 0
+s = "TBQBNRBACBAGHILRABC"
 while i != (len(docum) - 1):
-    if i < len(docum) - 5: #????
+    if i < len(docum) - 2: #????
         propusk = docum[i] + docum[i+1] + docum[i+2]
-    if ("A" in propusk) and ("B" in propusk) and ("C" in propusk):
+        propusk1 = docum[i - 1] + docum[i] + docum[i + 1]
+        propusk2 = docum[i - 2] + docum[i - 1] + docum[i]
+    if ("A" in propusk,propusk1,propusk2) and ("B" in propusk,propusk1,propusk2) and ("C" in propusk,propusk1,propusk2):
         MAXcount = max(MAXcount,count)
         count = 0
-        i += 3
+        i += 1
+    else:
+        count += 1
+        i += 1
+print(MAXcount)
+
+count = 0
+MAXcount = 0
+i = 0
+s = "TBQBNRBACBAGHILRABC"
+while i != (len(docum) - 1):
+    if i < len(docum) - 2: #????
+        propusk = docum[i] + docum[i + 1] + docum[i + 2]
+        propusk1 = docum[i - 1] + docum[i] + docum[i + 1]
+        propusk2 = docum[i - 2] + docum[i - 1] + docum[i]
+        if i > 0:
+            propusk1 = docum[i - 1] + docum[i] + docum[i + 1]
+        if i > 1:
+            propusk2 = docum[i - 2] + docum[i - 1] + docum[i]
+    if (("A" in propusk) and ("B" in propusk) and ("C" in propusk)) or (("A" in propusk1) and ("B" in propusk1) and ("C" in propusk1)) or (("A" in propusk2) and ("B" in propusk2) and ("C" in propusk2)) :
+        MAXcount = max(MAXcount,count)
+        count = 0
+        i += 1
     else:
         count += 1
         i += 1
