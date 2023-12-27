@@ -1,3 +1,27 @@
+import math
+count = 0
+DEL = []
+for i in range(201455,201471):
+    # count = 0
+    DEL = []
+    for d in range(1,round(i**(0.5))):
+        if (i % d) == 0:
+            # count += 1
+            DEL.append(d)
+            DEL.append(i//d)
+            # print(DEL)
+        if len(DEL) > 4:
+            break
+    if len(DEL) == 4:
+        print(DEL)
+
+
+
+
+
+
+
+
 # count = 1
 # docum = open('24_demo.txt').readline()
 # # print(docum)
@@ -87,25 +111,25 @@
 #         Count += 1
 # print(Count)
 
-count = 0
-MAXcount = 0
-i = 0
-propusk = ""
-propusk1 = ""
-propusk2 = ""
-docum = open('24.txt').readline()
-while i != (len(docum) - 1):
-    if i < len(docum) - 2:
-        propusk = docum[i] + docum[i + 1] + docum[i + 2]
-        if i > 0:
-            propusk1 = docum[i - 1] + docum[i] + docum[i + 1]
-        if i > 1:
-            propusk2 = docum[i - 2] + docum[i - 1] + docum[i]
-    if (("A" in propusk) and ("B" in propusk) and ("C" in propusk)) or (("A" in propusk1) and ("B" in propusk1) and ("C" in propusk1)) or (("A" in propusk2) and ("B" in propusk2) and ("C" in propusk2)) :
-        MAXcount = max(MAXcount,count)
-        count = 0
-        i += 1
-    else:
-        count += 1
-        i += 1
-print(MAXcount)
+# count = 0
+# MAXcount = 0
+# i = 0
+# propusk = ""
+# propusk1 = ""
+# propusk2 = ""
+# docum = open('24.txt').readline()
+# while i != (len(docum) - 1):
+#     if i < len(docum) - 2:
+#         propusk = docum[i] + docum[i + 1] + docum[i + 2]
+#         if i > 0:
+#             propusk1 = docum[i - 1] + docum[i] + docum[i + 1]
+#         if i > 1:
+#             propusk2 = docum[i - 2] + docum[i - 1] + docum[i]
+#     if (("A" in propusk) and ("B" in propusk) and ("C" in propusk)) or (("A" in propusk1) and ("B" in propusk1) and ("C" in propusk1)) or (("A" in propusk2) and ("B" in propusk2) and ("C" in propusk2)) :
+#         MAXcount = max(MAXcount,count)
+#         count = 0
+#         i += 1
+#     else:
+#         count += 1
+#         i += 1
+# print(MAXcount)

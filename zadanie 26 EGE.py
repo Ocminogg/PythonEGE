@@ -83,17 +83,19 @@
 # print(docum)
 # print(Zagruzili)
 
+# Egor
 docum = open('26.txt').readline()
 docum = docum.split(' ')
 TovaraNaSklade = int(docum[0])
-Money = int(docum[1])
+Budget = int(docum[1])
 
 docum = open('26.txt').readlines()
 docum.remove(docum[0])
 
-print(docum)
+# print(docum)
 MASSIV_A = []
 MASSIV_B = []
+
 for i in range(len(docum)):
     docum[i] = docum[i].split(' ', 3)
     docum[i][0] = int(docum[i][0])
@@ -103,12 +105,48 @@ for i in range(len(docum)):
         MASSIV_B.append(docum[i])
     if docum[i][2] == "A":
         MASSIV_A.append(docum[i])
-print(docum)
-print(MASSIV_A)
-print(MASSIV_B)
+# print(docum)
+# print(MASSIV_A)
+# print(MASSIV_B)
 
 MASSIV_A.sort()
-print(MASSIV_A)
+MASSIV_B.sort()
+# print(MASSIV_A)
+
+zatraty = 0
+price = 0
+for i in range(len(MASSIV_A)):
+    price = MASSIV_A[i][0]
+    kolvo = MASSIV_A[i][1]
+    zatraty += price * kolvo
+#     if zatraty > Budget:
+#         print("Первышен бюджет")
+#         print(zatraty)
+#         break
+# ostatok = Budget - zatraty
+# print(ostatok)
+
+countB = 0
+for i in range(len(MASSIV_B)):
+    price = MASSIV_B[i][0]
+    kolvo = MASSIV_B[i][1]
+
+    for j in range(kolvo):
+        zatraty += price
+        countB += 1
+        if zatraty > Budget:
+            break
+    if zatraty > Budget:
+        zatraty -= price
+        countB -= 1
+        print("Затраты")
+        print(zatraty)
+        print("Остаток")
+        print(Budget - zatraty)
+        print("Кол-во товара B")
+        print(countB)
+        break
+
 # docum.sort()
 # print(docum)
 
@@ -179,3 +217,40 @@ print(MASSIV_A)
 #     if data[i] - data[count - 1] <= zapas:
 #         itog = data[i]
 # print(itog)
+
+
+
+
+# docum = open('26 (1).txt').readline()
+# docum = docum.split(' ')
+# print(docum)
+# budget = int(docum[1])
+#
+# docum = open('26 (1).txt').readlines()
+# docum.remove(docum[0])
+# print(docum)
+# A = []
+# B = []
+# for tovar in docum:
+#     T = tovar.split(' ')
+#     T[0] = int(T[0])
+#     if T[1] == 'A\n':
+#         A.append(T)
+#     elif T[1] == 'B\n':
+#         B.append(T)
+#
+# A.sort()
+# B.sort()
+# print(A)
+# print(B)
+# zatraty = 0
+# count = 0
+# for i in range(len(B)):
+#     zatraty += B[i][0]
+#     count += 1
+#     if zatraty > budget:
+#         zatraty -= B[i][0]
+#         count -= 1
+#         break
+# print(budget - zatraty)
+# print(count)
