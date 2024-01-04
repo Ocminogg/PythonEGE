@@ -8,16 +8,22 @@
 print("x y z w")
 for x in range(2):
     for y in range(2):
+        # print(x, y)
         for z in range(2):
             for w in range(2):
-                if (((x <= w) and ((y) <= z)) <= ((z == x) or (w and not (y)))) == 0:
+                if (((x and not(y)) or (w <= z)) == (z == x)) == 1:
                     print(x, y, z, w)
 
 
-# for x in range(10,5,-1):
-#     print(x)
-#     # word = "dog"
-#     # print(word)
+# a = 5
+# b = "Привет Мир!\n"
+# # t = a // b
+# print(b*a)
+
+# for i in range(4):
+#     # print(i)
+#     word = "dog"
+#     print(word)
 
 #
 # print("x y z w")
