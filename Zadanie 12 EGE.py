@@ -1,7 +1,7 @@
-s = '1' * 84
-while '11111' in s:
-    s = s.replace("222", "1", 1)
+s = '1' * 39 + '2' * 39
+while '111' in s:
     s = s.replace("111", "2", 1)
+    s = s.replace("222", "1", 1)
 print(s)
 
 # for n in range(1, 100):

@@ -1,38 +1,36 @@
-import math
-count = 0
-DEL = []
-for i in range(201455,201471):
-    # count = 0
-    DEL = []
-    for d in range(1,round(i**(0.5))):
-        if (i % d) == 0:
-            # count += 1
-            DEL.append(d)
-            DEL.append(i//d)
-            # print(DEL)
-        if len(DEL) > 4:
-            break
-    if len(DEL) == 4:
-        print(DEL)
+# import math
+# count = 0
+# DEL = []
+# for i in range(201455,201471):
+#     # count = 0
+#     DEL = []
+#     for d in range(1,round(i**(0.5))):
+#         if (i % d) == 0:
+#             # count += 1
+#             DEL.append(d)
+#             DEL.append(i//d)
+#             # print(DEL)
+#         if len(DEL) > 4:
+#             break
+#     if len(DEL) == 4:
+#         print(DEL)
 
 
 
 
 
 
-
-
-# count = 1
-# docum = open('24_demo.txt').readline()
-# # print(docum)
-# MAXcount = 0
-# for i in range(1, len(docum)):
-#     if (docum[i] != docum[i-1]):
-#         count += 1
-#     else:
-#         MAXcount = max(count,MAXcount)
-#         count = 1
-# print(MAXcount)
+count = 1
+docum = open('24_demo.txt').readline()
+# print(docum)
+MAXcount = 0
+for i in range(1, len(docum)):
+    if (docum[i] != docum[i-1]):
+        count += 1
+    else:
+        MAXcount = max(count,MAXcount)
+        count = 1
+print(MAXcount)
 
 # count = 1
 # docum = open('24_demo.txt').readline()

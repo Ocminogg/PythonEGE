@@ -25,17 +25,17 @@
 #     print(count)
 # print(count)
 
-def F(n):
-    if n == 1:
-        return 1
-    if n > 1:
-        return 2*G(n-1)+5*n
-def G(n):
-    if n == 1:
-        return 1
-    if n > 1:
-        return F(n-1)+2*n
-print(F(4) + G(4))
+# def F(n):
+#     if n == 1:
+#         return 1
+#     if n > 1:
+#         return 2*G(n-1)+5*n
+# def G(n):
+#     if n == 1:
+#         return 1
+#     if n > 1:
+#         return F(n-1)+2*n
+# print(F(4) + G(4))
 
 # def F(n):
 #     if n == 1:
@@ -46,3 +46,12 @@ print(F(4) + G(4))
 #         return n * F(n - 1)
 #
 # print(F(40))
+
+def F(n):
+    if n == 1:
+        return 1
+    if n == 2:
+        return 2
+    if n > 2:
+        return 2 * F(n - 1) + (n - 2) * F(n - 2)
+print(F(6))

@@ -77,20 +77,33 @@
 #     if k == 90_000:
 #         print(a)
 #         break
+# minA = -100000
+# minB = -100000
+for a in range(-100, 100):
+    for b in range(a, 100):
+        Flag = True
+        for x in range(-100, 100):
+            if ((a<=x<=b) <= (x * x <= 100)) and ((x * x <= 64) <= (a<=x<=b)):
+                Flag = True
+            else:
+                Flag = False
+                break
 
+        if Flag:
+            # a = max(minA, a)
+            # b = max(minB, b)
+            print(a,b)
 
-# for a in range(300, 1, -1):
+# for a in range(-30, 30):
 #     Flag = True
-#     for x in range(0, 300):
-#         for y in range(0, 300):
-#             if ((x <= 9) <= (x * x <= a)) and ((y * y <= a) <= (y <= 9)):
-#                 Flag = True
-#             else:
-#                 Flag = False
-#                 break
+#     for x in range(-30, 30):
+#         if ((x == a) <= (x * x <= 100)) and ((x * x <= 64) <= (x == a)):
+#             Flag = True
+#         else:
+#             Flag = False
+#             break
 #     if Flag:
 #         print(a)
-#         break
 
 # for a in range(300, 1, -1):
 #     k = 0
@@ -126,21 +139,21 @@
 #             a.add(x)
 # print(a)
 
-for a in range(0, 125, 1):
-    Flag = True
-    for x in range(0, 100):
-        if Flag:
-            for y in range(0, 100):
-                if (x * y < a) or (x < y) or (x >= 12):
-                    Flag = True
-                else:
-                    Flag = False
-                    break
-        else:
-            break
-    if Flag:
-        print(a)
-        break
+# for a in range(0, 125, 1):
+#     Flag = True
+#     for x in range(0, 100):
+#         if Flag:
+#             for y in range(0, 100):
+#                 if (x * y < a) or (x < y) or (x >= 12):
+#                     Flag = True
+#                 else:
+#                     Flag = False
+#                     break
+#         else:
+#             break
+#     if Flag:
+#         print(a)
+#         break
 
 # for A in range(300):
 #     k = 0
