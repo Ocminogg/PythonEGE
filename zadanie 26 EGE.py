@@ -84,68 +84,68 @@
 # print(Zagruzili)
 
 # Egor
-docum = open('26.txt').readline()
-docum = docum.split(' ')
-TovaraNaSklade = int(docum[0])
-Budget = int(docum[1])
-
-docum = open('26.txt').readlines()
-docum.remove(docum[0])
-
-# print(docum)
-MASSIV_A = []
-MASSIV_B = []
-
-for i in range(len(docum)):
-    docum[i] = docum[i].split(' ', 3)
-    docum[i][0] = int(docum[i][0])
-    docum[i][1] = int(docum[i][1])
-    del docum[i][3]
-    if docum[i][2] == "B":
-        MASSIV_B.append(docum[i])
-    if docum[i][2] == "A":
-        MASSIV_A.append(docum[i])
-# print(docum)
-# print(MASSIV_A)
-# print(MASSIV_B)
-
-MASSIV_A.sort()
-MASSIV_B.sort()
-# print(MASSIV_A)
-
-zatraty = 0
-price = 0
-for i in range(len(MASSIV_A)):
-    price = MASSIV_A[i][0]
-    kolvo = MASSIV_A[i][1]
-    zatraty += price * kolvo
+# docum = open('26.txt').readline()
+# docum = docum.split(' ')
+# TovaraNaSklade = int(docum[0])
+# Budget = int(docum[1])
+#
+# docum = open('26.txt').readlines()
+# docum.remove(docum[0])
+#
+# # print(docum)
+# MASSIV_A = []
+# MASSIV_B = []
+#
+# for i in range(len(docum)):
+#     docum[i] = docum[i].split(' ', 3)
+#     docum[i][0] = int(docum[i][0])
+#     docum[i][1] = int(docum[i][1])
+#     del docum[i][3]
+#     if docum[i][2] == "B":
+#         MASSIV_B.append(docum[i])
+#     if docum[i][2] == "A":
+#         MASSIV_A.append(docum[i])
+# # print(docum)
+# # print(MASSIV_A)
+# # print(MASSIV_B)
+#
+# MASSIV_A.sort()
+# MASSIV_B.sort()
+# # print(MASSIV_A)
+#
+# zatraty = 0
+# price = 0
+# for i in range(len(MASSIV_A)):
+#     price = MASSIV_A[i][0]
+#     kolvo = MASSIV_A[i][1]
+#     zatraty += price * kolvo
+# #     if zatraty > Budget:
+# #         print("Первышен бюджет")
+# #         print(zatraty)
+# #         break
+# # ostatok = Budget - zatraty
+# # print(ostatok)
+#
+# countB = 0
+# for i in range(len(MASSIV_B)):
+#     price = MASSIV_B[i][0]
+#     kolvo = MASSIV_B[i][1]
+#
+#     for j in range(kolvo):
+#         zatraty += price
+#         countB += 1
+#         if zatraty > Budget:
+#             break
 #     if zatraty > Budget:
-#         print("Первышен бюджет")
+#         zatraty -= price
+#         countB -= 1
+#         print("Затраты")
 #         print(zatraty)
+#         print("Остаток")
+#         print(Budget - zatraty)
+#         print("Кол-во товара B")
+#         print(countB)
 #         break
-# ostatok = Budget - zatraty
-# print(ostatok)
-
-countB = 0
-for i in range(len(MASSIV_B)):
-    price = MASSIV_B[i][0]
-    kolvo = MASSIV_B[i][1]
-
-    for j in range(kolvo):
-        zatraty += price
-        countB += 1
-        if zatraty > Budget:
-            break
-    if zatraty > Budget:
-        zatraty -= price
-        countB -= 1
-        print("Затраты")
-        print(zatraty)
-        print("Остаток")
-        print(Budget - zatraty)
-        print("Кол-во товара B")
-        print(countB)
-        break
 
 # docum.sort()
 # print(docum)
@@ -254,3 +254,40 @@ for i in range(len(MASSIV_B)):
 #         break
 # print(budget - zatraty)
 # print(count)
+
+#Egor
+docum = open("inf_22_10_20_26.txt").readlines()
+docum.remove(docum[0])
+
+for i in range(len(docum)):
+    docum[i] = int(docum[i])
+print(docum)
+SUM = 0
+
+count = 0
+for i in range(len(docum)):
+    if docum[i] <= 100:
+        SUM += docum[i]
+        docum[i] = 0
+        count += 1
+print(docum)
+
+for i in range(count):
+    docum.remove(0)
+print(docum)
+
+docum.sort()
+print(docum)
+
+Length = len(docum)
+Length = Length // 2
+print(Length)
+print("Макс число со скидкой " + str(docum[Length - 1]))
+SUMskidka = 0
+for i in range(len(docum)):
+    if i <= Length-1:
+        SUMskidka += docum[i]
+    else:
+        SUM += docum[i]
+print(SUM + SUMskidka * 0.7)
+print(round(SUM + SUMskidka * 0.7))
