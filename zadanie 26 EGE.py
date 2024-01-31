@@ -292,6 +292,9 @@
 # print(SUM + SUMskidka * 0.7)
 # print(round(SUM + SUMskidka * 0.7))
 
+
+
+
 docum = open("26 (2).txt").readlines()
 docum.remove(docum[0])
 # print(docum)
@@ -313,21 +316,20 @@ DocumSort = []
 while len(docum) != 0:
     DocumSort.append(max(docum))
     docum.remove(max(docum))
-# print(DocumSort)
+print(DocumSort)
 
 first = [0,0]
 second = [0,0]
 third = [0,0]
 z = []
-print(first,second,third)
+# print(first,second,third)
 for i in range(len(DocumSort)):
-    z = docum[i]
-    first = [docum[i][0],docum[i][1] - 1]
-    second = [docum[i][0], docum[i][1] - 2]
-    third = [docum[i][0], docum[i][1] - 3]
-    print(first,second,third)
+    first = [DocumSort[i][0],DocumSort[i][1] - 1] #Свободное
+    second = [DocumSort[i][0], DocumSort[i][1] - 2] #Свободное
+    third = [DocumSort[i][0], DocumSort[i][1] - 3] #Занятое
+    # print(first,second,third)
     if (first not in DocumSort) and (second not in DocumSort) and (third in DocumSort):
-        print("Нашли")
+        print(second)
         break
     else:
         continue
