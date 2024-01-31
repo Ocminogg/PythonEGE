@@ -256,38 +256,78 @@
 # print(count)
 
 #Egor
-docum = open("inf_22_10_20_26.txt").readlines()
+# docum = open("inf_22_10_20_26.txt").readlines()
+# docum.remove(docum[0])
+#
+# for i in range(len(docum)):
+#     docum[i] = int(docum[i])
+# print(docum)
+# SUM = 0
+#
+# count = 0
+# for i in range(len(docum)):
+#     if docum[i] <= 100:
+#         SUM += docum[i]
+#         docum[i] = 0
+#         count += 1
+# print(docum)
+#
+# for i in range(count):
+#     docum.remove(0)
+# print(docum)
+#
+# docum.sort()
+# print(docum)
+#
+# Length = len(docum)
+# Length = Length // 2
+# print(Length)
+# print("Макс число со скидкой " + str(docum[Length - 1]))
+# SUMskidka = 0
+# for i in range(len(docum)):
+#     if i <= Length-1:
+#         SUMskidka += docum[i]
+#     else:
+#         SUM += docum[i]
+# print(SUM + SUMskidka * 0.7)
+# print(round(SUM + SUMskidka * 0.7))
+
+docum = open("26 (2).txt").readlines()
 docum.remove(docum[0])
+# print(docum)
 
 for i in range(len(docum)):
-    docum[i] = int(docum[i])
-print(docum)
-SUM = 0
+    docum[i] = docum[i].split(" ")
+    docum[i][0] = int(docum[i][0])
+    docum[i][1] = int(docum[i][1])
+# print(docum)
 
-count = 0
-for i in range(len(docum)):
-    if docum[i] <= 100:
-        SUM += docum[i]
-        docum[i] = 0
-        count += 1
-print(docum)
+# print(docum)
+# print(max(docum))
+# print(docum.index(max(docum)))
+# docum.remove(max(docum))
+# print(max(docum))
+# print(docum[2861])
 
-for i in range(count):
-    docum.remove(0)
-print(docum)
+DocumSort = []
+while len(docum) != 0:
+    DocumSort.append(max(docum))
+    docum.remove(max(docum))
+# print(DocumSort)
 
-docum.sort()
-print(docum)
-
-Length = len(docum)
-Length = Length // 2
-print(Length)
-print("Макс число со скидкой " + str(docum[Length - 1]))
-SUMskidka = 0
-for i in range(len(docum)):
-    if i <= Length-1:
-        SUMskidka += docum[i]
+first = [0,0]
+second = [0,0]
+third = [0,0]
+z = []
+print(first,second,third)
+for i in range(len(DocumSort)):
+    z = docum[i]
+    first = [docum[i][0],docum[i][1] - 1]
+    second = [docum[i][0], docum[i][1] - 2]
+    third = [docum[i][0], docum[i][1] - 3]
+    print(first,second,third)
+    if (first not in DocumSort) and (second not in DocumSort) and (third in DocumSort):
+        print("Нашли")
+        break
     else:
-        SUM += docum[i]
-print(SUM + SUMskidka * 0.7)
-print(round(SUM + SUMskidka * 0.7))
+        continue

@@ -64,14 +64,15 @@
 #             m = max(m, l[i] + l[j])
 # print(count, m)
 
-count = 0
-MAXSUM = -1000000
-SUM = 0
-docum = open('17.txt').readlines()
-# print (docum)
+# count = 0
+# MAXSUM = -1000000
+# SUM = 0
+# docum = open('17.txt').readlines()
+# # print (docum)
+#
+# docum = [int(i) for i in docum]
+# print(docum)
+#
+# for i in range(1,len(docum)):
+#     if str(docum[i-1])
 
-docum = [int(i) for i in docum]
-print(docum)
-
-for i in range(1,len(docum)):
-    if str(docum[i-1])
