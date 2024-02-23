@@ -79,20 +79,20 @@
 #         break
 # minA = -100000
 # minB = -100000
-for a in range(-100, 100):
-    for b in range(a, 100):
-        Flag = True
-        for x in range(-100, 100):
-            if ((a<=x<=b) <= (x * x <= 100)) and ((x * x <= 64) <= (a<=x<=b)):
-                Flag = True
-            else:
-                Flag = False
-                break
-
-        if Flag:
-            # a = max(minA, a)
-            # b = max(minB, b)
-            print(a,b)
+# for a in range(-100, 100):
+#     for b in range(a, 100):
+#         Flag = True
+#         for x in range(-100, 100):
+#             if ((a<=x<=b) <= (x * x <= 100)) and ((x * x <= 64) <= (a<=x<=b)):
+#                 Flag = True
+#             else:
+#                 Flag = False
+#                 break
+#
+#         if Flag:
+#             # a = max(minA, a)
+#             # b = max(minB, b)
+#             print(a,b)
 
 # for a in range(-30, 30):
 #     Flag = True
@@ -164,3 +164,64 @@ for a in range(-100, 100):
 #     if k == 90_000:
 #         print(A)
 #         break
+
+# for A in range(50):
+#     flag = True
+#     for x in range(50):
+#         if ((x & 39)==0) or (((x & 11) == 0) <= ((x & A) != 0)):
+#             flag = True
+#         else:
+#             flag = False
+#             break
+#     if flag == True:
+#         print(A)
+#         break
+
+# P = []
+# for i in range(10,30):
+#     P.append(i)
+# Q = []
+# for i in range(13,19):
+#     Q.append(i)
+#
+# for A in range(0,40):
+#     flag = True
+#     for x in range(0,40):
+#         if ((x == A) <= (x in P)) or (x in Q):
+#             flag = True
+#         else:
+#             flag = False
+#             break
+#     if flag == True:
+#         print(A)
+
+P = []
+for i in range(20,51):
+    P.append(i)
+Q = []
+for i in range(30,66):
+    Q.append(i)
+# A = []
+# for i in range(30,51):
+#     A.append(i)
+
+# flag = True
+# for x in range(20,70):
+#     if (not(x in A)) <= ((x in P) <= (not (x in Q))):
+#         flag = True
+#     else:
+#         flag = False
+#         break
+# if flag == True:
+#     print(A)
+
+for A in range(20,70):
+    flag = True
+    for x in range(20,70):
+        if (not(x == A)) <= ((x in P) <= (not (x in Q))):
+            flag = True
+        else:
+            flag = False
+            break
+    if flag == True:
+        print(A)

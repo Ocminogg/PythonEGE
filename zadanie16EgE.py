@@ -47,11 +47,44 @@
 #
 # print(F(40))
 
+# def F(n):
+#     if n == 1:
+#         return 1
+#     if n == 2:
+#         return 2
+#     if n > 2:
+#         return 2 * F(n - 1) + (n - 2) * F(n - 2)
+# print(F(6))
+
+import sys
+sys.setrecursionlimit(10**6)
 def F(n):
-    if n == 1:
-        return 1
-    if n == 2:
-        return 2
-    if n > 2:
-        return 2 * F(n - 1) + (n - 2) * F(n - 2)
-print(F(6))
+    if n < 11:
+        return 10
+    else:
+        return n + F(n - 1)
+print(F(2124) - F(2122))
+# def F(n):
+#     if n == 1:
+#         return 1
+#     if n % 2 == 0:
+#         return n + F(n-1)
+#     if n > 1 and n % 2 == 1:
+#         return 2*F(n-2)
+# print(F(26))
+
+# from functools import *
+#
+# # граничное значение
+# a = list(map(int, str(2 ** 63 - 1)))
+# @cache
+# def f(s, l, fl):
+#     # если последовательность нужной длины, проверяем, что сумма нам подходит,
+#     # и выходим из рекурсии.
+#     if l == 0:
+#         return s == 159
+#     # проверяем ограниченные подпоследовательности большей длины
+#     return sum(f(s + x, l - 1, fl and (x == a[-l])) for x in range([10, a[-l] + 1][fl]))
+#
+# # ответ - количество ограниченных последовательностей необходимой длины
+# print(f(0, len(a), 1))
