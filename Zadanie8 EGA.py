@@ -29,10 +29,19 @@
 #         count += 1
 # print(count)
 
+# count = 0
+# for x in range(4):
+#     for y in range(4):
+#         for z in range(4):
+#             if (x + z > y) and x != 0:
+#                 count +=1
+# print(count)
+
 count = 0
-for x in range(4):
-    for y in range(4):
-        for z in range(4):
-            if (x + z > y) and x != 0:
-                count +=1
+for x in range(7):
+    for y in range(7):
+        for z in range(7):
+            for w in range(7):
+                if x > y and y > z and z > w:
+                    count += 1
 print(count)

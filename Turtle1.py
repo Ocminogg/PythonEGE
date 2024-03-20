@@ -1,16 +1,30 @@
 from turtle import *
 left(90)
-k = 45 # масштаб
-tracer(0) #скорость
+k = 30 # масштаб
+tracer(5) #скорость
 up()
-goto(0 * k, 0 * k) #начальное расположение
+goto(-10 * k, -10 * k) #начальное расположение
 down()
-for i in range(4):
-    forward(9 * k)
-    right(120)
+for i in range(2):
+    forward(10 * k)
+    right(90)
+    forward(18 * k)
+    right(90)
 up() #Черепаха поднимает хвост
-for x in range(-5, 20):
-    for y in range(-5, 20):
+forward(5 * k)
+right(90)
+forward(7 * k)
+left(90)
+down()
+for i in range(2):
+    forward(10 * k)
+    right(90)
+    forward(7 * k)
+    right(90)
+up()
+
+for x in range(-10, 10):
+    for y in range(-10, 10):
         goto(x * k, y * k)
         dot(3, "red")
         dot(1, "white")
@@ -67,3 +81,26 @@ mainloop()
 # print(cnt)
 # done()
 # exit()
+
+# import turtle
+# t=turtle.Turtle()
+# t.reset()
+# t.seth(90)
+# t.width(2)
+# t.speed(5)
+# k = 10 #коэффициент для увеличения масштаба
+# t.right(180)
+# t.forward(5*k)
+# t.right(90)
+# t.forward(50*k)
+# t.right(90)
+# t.forward(5*k)
+# for i in range(5):
+#     t.seth(90)
+#     t.circle(-5*k,180)
+# t.penup()
+# for x in range(0,-14,-1):
+#     for y in range(-5,8):
+#         t.goto(x*k , y*k )
+#         t.dot(5)
+# turtle.mainloop()

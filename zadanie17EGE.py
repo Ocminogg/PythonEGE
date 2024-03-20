@@ -76,3 +76,18 @@
 # for i in range(1,len(docum)):
 #     if str(docum[i-1])
 
+
+docum = [int(i) for i in open("107_17.txt").readlines()]
+print(docum)
+minKratnoe = 10000000
+for i in docum:
+    if i < minKratnoe and i % 21 == 0:
+        minKratnoe = i
+print(minKratnoe)
+count = 0
+MAXsum = 0
+for i in range(len(docum) - 1):
+    if docum[i] % minKratnoe == 0 or docum[i+1] % minKratnoe == 0:
+        count += 1
+        MAXsum = max(MAXsum,docum[i] + docum[i+1])
+print(count, MAXsum)
