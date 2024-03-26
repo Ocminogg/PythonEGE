@@ -99,18 +99,51 @@
 #     DEL=[]
 #     count += M(number)
 
-count = 0
-DEL = []
-for chislo in range(95632,95651):
-    count = 0
-    DEL = []
-    for delitel in range(1,chislo+1):
-        if count > 6:
-            break
-        if ((chislo % delitel) == 0) and (delitel % 2 != 0):
-            count += 1
-            DEL.append(delitel)
-    if count == 6:
-        print("\nDelitel")
-        for i in DEL:
-            print(str(i) , end = " ")
+# count = 0
+# DEL = []
+# for chislo in range(95632,95651):
+#     count = 0
+#     DEL = []
+#     for delitel in range(1,chislo+1):
+#         if count > 6:
+#             break
+#         if ((chislo % delitel) == 0) and (delitel % 2 != 0):
+#             count += 1
+#             DEL.append(delitel)
+#     if count == 6:
+#         print("\nDelitel")
+#         for i in DEL:
+#             print(str(i) , end = " ")
+
+# m = []
+# delitel_array = []
+# count_d = 0
+# for i in range(174457, 174506):
+#     m.append(i)
+# for i in range(len(m)):
+#     for delit in range(2, m[i]):
+#         if m[i] % delit == 0:
+#             count_d += 1
+#             delitel_array.append(delit)
+#     if count_d == 2:
+#         print(delitel_array)
+#         # print(delitel_array[0],m[i] // delitel_array[0])
+#         delitel_array.clear()
+#     else:
+#         delitel_array.clear()
+#     count_d = 0
+
+
+delitel_array = []
+count_d = 0
+for x in range(174457, 174506):
+    for delit in range(2, x):
+        if x % delit == 0:
+            count_d += 1
+            delitel_array.append(delit)
+    if count_d == 2:
+        print(sorted(delitel_array))
+        delitel_array.clear()
+    else:
+        delitel_array.clear()
+    count_d = 0

@@ -20,25 +20,25 @@
 
 
 
-count = 0
-docum = open('242424.txt').readline()
+# count = 0
+# docum = open('242424.txt').readline()
 # print(docum)
-DICT = {"A": 0,"B": 0}
-bukva = ""
-for i in range(len(docum) - 2):
-    if (docum[i] == docum[i+1]):
-        bukva = docum[i+2]
-        if not(DICT.get(bukva)):
-            DICT[docum[i+2]] = 1
-        else:
-            DICT[docum[i+2]] += 1
-MAXcount = 0
-
-for i in DICT:
-    if MAXcount < DICT.get(i):
-        MAXcount = DICT.get(i)
-        bukva = i
-print(bukva)
+# DICT = {"A": 0,"B": 0}
+# bukva = ""
+# for i in range(len(docum) - 2):
+#     if (docum[i] == docum[i+1]):
+#         bukva = docum[i+2]
+#         if not(DICT.get(bukva)):
+#             DICT[docum[i+2]] = 1
+#         else:
+#             DICT[docum[i+2]] += 1
+# MAXcount = 0
+#
+# for i in DICT:
+#     if MAXcount < DICT.get(i):
+#         MAXcount = DICT.get(i)
+#         bukva = i
+# print(bukva)
 
 
 # count = 1
@@ -139,4 +139,26 @@ print(bukva)
 #     else:
 #         count += 1
 #         i += 1
+# print(MAXcount)
+
+# docum = open("zadanie24_1.txt").readline()
+# count = 0
+# MAXcount = 0
+# for bukva in docum:
+#     if bukva == "A":
+#         count += 1
+#         MAXcount = max(MAXcount,count)
+#     else:
+#         count = 0
+# print(MAXcount)
+
+# docum = open("zadanie24_1.txt").readline()
+# count = 0
+# MAXcount = 0
+# for bukva in docum:
+#     if bukva == "A":
+#         count +=1
+#         MAXcount = max(MAXcount,count)
+#     else:
+#         count = 0
 # print(MAXcount)
