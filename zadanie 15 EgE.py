@@ -156,19 +156,20 @@
 #         break
 
 # for A in range(300):
-#     k = 0
+#     k = True
 #     for x in range(300):
 #         for y in range(300):
-#             if (x * y < A) or (x < y) or (x >= 12):
-#                 k += 1
-#     if k == 90_000:
+#             if ((x * y < A) or (x < y) or (x >= 12)) == 0:
+#                 k = False
+#                 break
+#     if k == True:
 #         print(A)
 #         break
 
-# for A in range(50):
+# for A in range(65):
 #     flag = True
-#     for x in range(50):
-#         if ((x & 39)==0) or (((x & 11) == 0) <= ((x & A) != 0)):
+#     for x in range(65):
+#         if (((x & 41) != 0) <= (((x & 33) == 0) <= ((x & A) != 0))) == 1:
 #             flag = True
 #         else:
 #             flag = False
@@ -196,32 +197,33 @@
 #         print(A)
 
 P = []
-for i in range(20,51):
+for i in range(17,55):
     P.append(i)
 Q = []
-for i in range(30,66):
+for i in range(37,84):
     Q.append(i)
-# A = []
-# for i in range(30,51):
-#     A.append(i)
 
-# flag = True
-# for x in range(20,70):
-#     if (not(x in A)) <= ((x in P) <= (not (x in Q))):
-#         flag = True
-#     else:
-#         flag = False
-#         break
-# if flag == True:
-#     print(A)
+A = []
+for i in range(37,55):
+    A.append(i)
 
-for A in range(20,70):
+for x in range(1,90):
     flag = True
-    for x in range(20,70):
-        if (not(x == A)) <= ((x in P) <= (not (x in Q))):
-            flag = True
-        else:
-            flag = False
-            break
-    if flag == True:
-        print(A)
+    if (x in P) <= (((x in Q) and not(x in A)) <= (not(x in P))):
+        flag = True
+    else:
+        flag = False
+        break
+if flag == True:
+    print(A)
+    print(len(A) - 1)
+# for A in range(1,90):
+#     flag = True
+#     for x in range(1,90):
+#         if (x in P) <= (((x in Q) and not(x == A)) <= (not(x in P))):
+#             flag = True
+#         else:
+#             flag = False
+#             break
+#     if flag == True:
+#         print(A)

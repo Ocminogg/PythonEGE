@@ -54,9 +54,30 @@
 #
 #     print(N)
 
-a = []
-for x in range(100, 3001):
-    i = int(bin(x)[3:], 2)
-    if x - i not in a:
-        a.append(x-i)
-print(len(a))
+# a = []
+# for x in range(100, 3001):
+#     i = int(bin(x)[3:], 2)
+#     if x - i not in a:
+#         a.append(x-i)
+# print(len(a))
+
+
+import turtle as t
+t.left(90)
+t.speed(0)
+k = 30
+x = 4
+t.down()
+for i in range(4):
+    t.forward(x * k)
+    t.right(90)
+    t.forward(x * k)
+    t.left(90)
+    t.forward(x * k)
+    t.right(90)
+t.up()
+for i in range(0, 3 * x + 1):
+    for y in range(-x, 2 * x + 1):
+        t.goto(i * k, y * k)
+        t.dot()
+t.mainloop()

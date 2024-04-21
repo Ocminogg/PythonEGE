@@ -1,13 +1,27 @@
-# def F(n):
-#     if n == 0:
-#         return 3
-#     if 0 < n and n <= 15:
-#         return F(n-1)
-#     if 15 < n and n < 100:
-#         return 2.5 * F(n-3)
-#     if n >= 100:
-#         return 3.3 * F(n-2)
-# print(F(100))
+# import sys
+# sys.setrecursionlimit(10**9)
+# def F(a,b):
+#     if b == 0:
+#         return a
+#     if a >= b > 0:
+#         return F(a-b,b)
+#     if a < b:
+#         return F(b,a)
+# count = 0
+# for n in range(123456795,1234567889):
+#     if n % 14 == 0:
+#         continue
+#     if F(n,14) == 1:
+#         count += 1
+#         print(count)
+#
+# print(count)
+
+a_2 = len(range(123456796, 1234567889, 2))
+a_7 = len(range(123456802, 1234567889, 7))
+a_14 = len(range(123456802, 1234567889, 14))
+print(len(range(123456795, 1234567888)) - a_2 - a_7 + a_14)
+
 
 
 # def F(n):
@@ -56,14 +70,14 @@
 #         return 2 * F(n - 1) + (n - 2) * F(n - 2)
 # print(F(6))
 
-import sys
-sys.setrecursionlimit(10**6)
-def F(n):
-    if n < 11:
-        return 10
-    else:
-        return n + F(n - 1)
-print(F(2124) - F(2122))
+# import sys
+# sys.setrecursionlimit(10**6)
+# def F(n):
+#     if n < 11:
+#         return 10
+#     else:
+#         return n + F(n - 1)
+# print(F(2124) - F(2122))
 # def F(n):
 #     if n == 1:
 #         return 1

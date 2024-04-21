@@ -77,17 +77,32 @@
 #     if str(docum[i-1])
 
 
-docum = [int(i) for i in open("107_17.txt").readlines()]
-print(docum)
-minKratnoe = 10000000
-for i in docum:
-    if i < minKratnoe and i % 21 == 0:
-        minKratnoe = i
-print(minKratnoe)
+# docum = [int(i) for i in open("107_17.txt").readlines()]
+# print(docum)
+# minKratnoe = 10000000
+# for i in docum:
+#     if i < minKratnoe and i % 21 == 0:
+#         minKratnoe = i
+# print(minKratnoe)
+# count = 0
+# MAXsum = 0
+# for i in range(len(docum) - 1):
+#     if docum[i] % minKratnoe == 0 or docum[i+1] % minKratnoe == 0:
+#         count += 1
+#         MAXsum = max(MAXsum,docum[i] + docum[i+1])
+# print(count, MAXsum)
+
+docum = open("C:\\PythonEGE\\Входящие данные\\17.txt").readlines()
 count = 0
-MAXsum = 0
-for i in range(len(docum) - 1):
-    if docum[i] % minKratnoe == 0 or docum[i+1] % minKratnoe == 0:
-        count += 1
-        MAXsum = max(MAXsum,docum[i] + docum[i+1])
-print(count, MAXsum)
+MAXPara = 0
+for i in range(len(docum)):
+    docum[i] = int(docum[i])
+
+for i in range(len(docum)):
+    for j in range(i+1,len(docum)):
+        a1 = docum[i]
+        a2 = docum[j]
+        if (a1 - a2) % 80 == 0:
+            count += 1
+            MAXPara = max(MAXPara,(a1 - a2))
+print(count, MAXPara)
