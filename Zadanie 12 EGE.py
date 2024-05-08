@@ -1,8 +1,10 @@
-# s = '1' * 39 + '2' * 39
-# while '111' in s:
-#     s = s.replace("111", "2", 1)
-#     s = s.replace("222", "1", 1)
-# print(s)
+s = 68 * "8"
+while '222' in s or '888' in s:
+    if '222' in s:
+        s = s.replace("222","8",1)
+    else:
+        s = s.replace("888", "2", 1)
+print(s)
 
 # for n in range(1, 100):
 #     SUM = 0
@@ -32,25 +34,25 @@
 #                 s = s.replace("03", "1210", 1)
 #             if s == poisk:
 #                 print(s)
-s = '1' + '8' * 99 + '1'
-while ('81' in s) or ('882' in s) or ('8883' in s):
-    if '81' in s:
-        s = s.replace('81', '2', 1)
-    elif '882' in s:
-        s = s.replace('882', '3', 1)
-    else:
-        s = s.replace('8883', '1', 1)
-print(s)
+# s = '1' + '8' * 99 + '1'
+# while ('81' in s) or ('882' in s) or ('8883' in s):
+#     if '81' in s:
+#         s = s.replace('81', '2', 1)
+#     elif '882' in s:
+#         s = s.replace('882', '3', 1)
+#     else:
+#         s = s.replace('8883', '1', 1)
+# print(s)
 
-for x in range(60):
-    for y in range(60):
-        for z in range(60):
-            s = "0" + ("1" * x) + ("2" * y) + ("3" * z)
-            start = s
-            while ('01' in s) or ('02' in s) or ('03' in s):
-                s = s.replace('01', '30', 1)
-                s = s.replace('02', '101', 1)
-                s = s.replace('03', '202', 1)
-            if s.count("1") == 15 and s.count("2") == 10 and s.count("3") == 60:
-                print(start.count("1"))
-                break
+# for x in range(60):
+#     for y in range(60):
+#         for z in range(60):
+#             s = "0" + ("1" * x) + ("2" * y) + ("3" * z)
+#             start = s
+#             while ('01' in s) or ('02' in s) or ('03' in s):
+#                 s = s.replace('01', '30', 1)
+#                 s = s.replace('02', '101', 1)
+#                 s = s.replace('03', '202', 1)
+#             if s.count("1") == 15 and s.count("2") == 10 and s.count("3") == 60:
+#                 print(start.count("1"))
+#                 break

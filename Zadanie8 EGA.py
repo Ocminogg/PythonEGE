@@ -59,3 +59,15 @@
 #                 if x > y and y > z and z > w:
 #                     count += 1
 # print(count)
+
+a = ["А", "В", "Е", "И", "К", "Н", "О", "Р"]
+count = 0
+for i in range(0, len(a)):
+    for j in range(0, len(a)):
+        for g in range(0, len(a)):
+            s = a[i] + a[j] + a[g]
+            if s.count('В') == 1:
+                count += 1
+                if s.count('А') == 0:
+                    print(count)  # Возьмём первое число, которое выдаст программа
+                    break

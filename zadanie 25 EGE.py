@@ -134,16 +134,22 @@
 #     count_d = 0
 
 
-delitel_array = []
-count_d = 0
-for x in range(174457, 174506):
-    for delit in range(2, x):
-        if x % delit == 0:
-            count_d += 1
-            delitel_array.append(delit)
-    if count_d == 2:
-        print(sorted(delitel_array))
-        delitel_array.clear()
-    else:
-        delitel_array.clear()
-    count_d = 0
+# delitel_array = []
+# count_d = 0
+# for x in range(174457, 174506):
+#     for delit in range(2, x):
+#         if x % delit == 0:
+#             count_d += 1
+#             delitel_array.append(delit)
+#     if count_d == 2:
+#         print(sorted(delitel_array))
+#         delitel_array.clear()
+#     else:
+#         delitel_array.clear()
+#     count_d = 0
+
+from fnmatch import *
+for x in range(12046009,129999946999):
+    if x % 98591 == 0:
+        if fnmatch(str(x), '12?*46??9'):
+            print(x,x / 98591)

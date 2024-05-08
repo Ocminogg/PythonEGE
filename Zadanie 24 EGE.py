@@ -163,21 +163,22 @@
 #         count = 0
 # print(MAXcount)
 
-word = ''
-summ = 0
-def is_prime(n):
-    if n % 2 == 0:
-        return False
-    for i in range(3, int(n ** 0.5)+1, 2):
-        if n % i == 0:
-            return False
-    return True
+# word = ''
+# summ = 0
+# def is_prime(n):
+#     if n % 2 == 0:
+#         return False
+#     for i in range(3, int(n ** 0.5)+1, 2):
+#         if n % i == 0:
+#             return False
+#     return True
+#
+# for z in range(10 ** 9):
+#     for v in range(10):
+#         for z1 in range(10 ** 9):
+#             word = '7' + str(z) + '53' + str(v) + '3' + str(z1) + '1'
+#             for i in word:
+#                 summ += int(i)
+#             if int(word) % 2627 == 0 and is_prime(summ):
+#                 print(word, int(word) // 2627)
 
-for z in range(10 ** 9):
-    for v in range(10):
-        for z1 in range(10 ** 9):
-            word = '7' + str(z) + '53' + str(v) + '3' + str(z1) + '1'
-            for i in word:
-                summ += int(i)
-            if int(word) % 2627 == 0 and is_prime(summ):
-                print(word, int(word) // 2627)

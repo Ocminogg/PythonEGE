@@ -92,17 +92,32 @@
 #         MAXsum = max(MAXsum,docum[i] + docum[i+1])
 # print(count, MAXsum)
 
+
 docum = open("C:\\PythonEGE\\Входящие данные\\17.txt").readlines()
 count = 0
 MAXPara = 0
+minNumber = 1000000
 for i in range(len(docum)):
     docum[i] = int(docum[i])
 
-for i in range(len(docum)):
-    for j in range(i+1,len(docum)):
-        a1 = docum[i]
-        a2 = docum[j]
-        if (a1 - a2) % 80 == 0:
-            count += 1
-            MAXPara = max(MAXPara,(a1 - a2))
+# print(abs(-126) % 10)
+for num in docum:
+    if abs(num) % 10 == 3:
+        minNumber = min(minNumber,num)
+
+for i in range(len(docum) - 1):
+    a1 = docum[i]
+    a2 = docum[i+1]
+    if abs(a1) % 10 == abs(a2) % 10:
+        # if abs(a1 * a2) % 3 == 0 and abs(a1 * a2) % 9 != 0: # неверное условие
+        if (abs(a1) % 3 == 0 and abs(a2) % 3 != 0) or (abs(a2) % 3 == 0 and abs(a1) % 3 != 0):
+            if a1**2 + a2**2 <= minNumber**2:
+                MAXPara = max(MAXPara,a1**2 + a2**2)
+                count +=1
+        # if abs(a1) % 3 == 0 and abs(a2) % 3 != 0 and a1 ** 2 + a2 ** 2 <= minNumber ** 2:
+        #     count += 1
+        #     MAXPara = max(MAXPara, a1 ** 2 + a2 ** 2)
+        # elif abs(a2) % 3 == 0 and abs(a1) % 3 != 0 and a1 ** 2 + a2 ** 2 <= minNumber ** 2:
+        #     count += 1
+        #     MAXPara = max(MAXPara, a1 ** 2 + a2 ** 2)
 print(count, MAXPara)

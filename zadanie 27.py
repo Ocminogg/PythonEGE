@@ -100,7 +100,7 @@
 
 
 
-# path = 'D:\\TetrikaPython\\28130_B.txt' # для Windows
+path = 'C:\\Users\\User\\Downloads\\17.txt' # для Windows
 #
 # docum = open(path).readlines()
 # print(docum)
