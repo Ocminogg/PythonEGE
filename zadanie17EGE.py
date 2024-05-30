@@ -93,31 +93,44 @@
 # print(count, MAXsum)
 
 
-docum = open("C:\\PythonEGE\\Входящие данные\\17.txt").readlines()
-count = 0
-MAXPara = 0
-minNumber = 1000000
-for i in range(len(docum)):
-    docum[i] = int(docum[i])
+# docum = open("C:\\PythonEGE\\Входящие данные\\17.txt").readlines()
+# count = 0
+# MAXPara = 0
+# minNumber = 1000000
+# for i in range(len(docum)):
+#     docum[i] = int(docum[i])
+#
+# # print(abs(-126) % 10)
+# for num in docum:
+#     if abs(num) % 10 == 3:
+#         minNumber = min(minNumber,num)
+#
+# for i in range(len(docum) - 1):
+#     a1 = docum[i]
+#     a2 = docum[i+1]
+#     if abs(a1) % 10 == abs(a2) % 10:
+#         # if abs(a1 * a2) % 3 == 0 and abs(a1 * a2) % 9 != 0: # неверное условие
+#         if (abs(a1) % 3 == 0 and abs(a2) % 3 != 0) or (abs(a2) % 3 == 0 and abs(a1) % 3 != 0):
+#             if a1**2 + a2**2 <= minNumber**2:
+#                 MAXPara = max(MAXPara,a1**2 + a2**2)
+#                 count +=1
+#         # if abs(a1) % 3 == 0 and abs(a2) % 3 != 0 and a1 ** 2 + a2 ** 2 <= minNumber ** 2:
+#         #     count += 1
+#         #     MAXPara = max(MAXPara, a1 ** 2 + a2 ** 2)
+#         # elif abs(a2) % 3 == 0 and abs(a1) % 3 != 0 and a1 ** 2 + a2 ** 2 <= minNumber ** 2:
+#         #     count += 1
+#         #     MAXPara = max(MAXPara, a1 ** 2 + a2 ** 2)
+# print(count, MAXPara)
 
-# print(abs(-126) % 10)
-for num in docum:
-    if abs(num) % 10 == 3:
-        minNumber = min(minNumber,num)
-
-for i in range(len(docum) - 1):
-    a1 = docum[i]
-    a2 = docum[i+1]
-    if abs(a1) % 10 == abs(a2) % 10:
-        # if abs(a1 * a2) % 3 == 0 and abs(a1 * a2) % 9 != 0: # неверное условие
-        if (abs(a1) % 3 == 0 and abs(a2) % 3 != 0) or (abs(a2) % 3 == 0 and abs(a1) % 3 != 0):
-            if a1**2 + a2**2 <= minNumber**2:
-                MAXPara = max(MAXPara,a1**2 + a2**2)
-                count +=1
-        # if abs(a1) % 3 == 0 and abs(a2) % 3 != 0 and a1 ** 2 + a2 ** 2 <= minNumber ** 2:
-        #     count += 1
-        #     MAXPara = max(MAXPara, a1 ** 2 + a2 ** 2)
-        # elif abs(a2) % 3 == 0 and abs(a1) % 3 != 0 and a1 ** 2 + a2 ** 2 <= minNumber ** 2:
-        #     count += 1
-        #     MAXPara = max(MAXPara, a1 ** 2 + a2 ** 2)
-print(count, MAXPara)
+# docum = [int(i) for i in open("17 (2).txt").readlines()]
+# print(docum)
+# sum_nechet = 0
+# count_nechet = 0
+# for num in docum:
+#     if num % 2 == 1:
+#         sum_nechet += num
+#         count_nechet += 1
+# avrg = sum_nechet/count_nechet
+# print(avrg)
+# for i in range(len(docum)):
+#     if docum[i] % 5 == 0 or docum[i+1] % 5 == 0:

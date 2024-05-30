@@ -178,45 +178,49 @@
 #         print(A)
 #         break
 
-# P = []
-# for i in range(10,30):
-#     P.append(i)
-# Q = []
-# for i in range(13,19):
-#     Q.append(i)
-#
-# for A in range(0,40):
-#     flag = True
-#     for x in range(0,40):
-#         if ((x == A) <= (x in P)) or (x in Q):
-#             flag = True
-#         else:
-#             flag = False
-#             break
-#     if flag == True:
-#         print(A)
-
 P = []
-for i in range(17,55):
+for i in range(3,39):
     P.append(i)
 Q = []
-for i in range(37,84):
+for i in range(21,58):
     Q.append(i)
-
-A = []
-for i in range(37,55):
-    A.append(i)
-
-for x in range(1,90):
+Array_A = []
+for A in range(0,100):
     flag = True
-    if (x in P) <= (((x in Q) and not(x in A)) <= (not(x in P))):
-        flag = True
-    else:
-        flag = False
-        break
-if flag == True:
-    print(A)
-    print(len(A) - 1)
+    for x in range(0,100):
+        if ((x in Q) <= (x in P)) <= (not (x == A)):
+            flag = True
+        else:
+            flag = False
+            break
+    if flag == True:
+        Array_A.append(A)
+print(Array_A)
+print(len(Array_A))
+
+# P = []
+# for i in range(3,39):
+#     P.append(i)
+# Q = []
+# for i in range(21,58):
+#     Q.append(i)
+#
+# A = []
+# for i in range(38,58):
+#     A.append(i)
+#
+# for x in range(1,90):
+#     flag = True
+#     if ((x in Q) <= (x in P)) <= (not (x in A)):
+#         flag = True
+#     else:
+#         flag = False
+#         break
+#
+# if flag == True:
+#     print(A)
+#     print(len(A))
+
 # for A in range(1,90):
 #     flag = True
 #     for x in range(1,90):
@@ -226,4 +230,14 @@ if flag == True:
 #             flag = False
 #             break
 #     if flag == True:
+#         print(A)
+
+# k = 0
+# for A in range(13,22):
+#     k = 0
+#     for m in range(50):
+#         for n in range(50):
+#             if ((2*m + 3*n) > 40) or ((m < A) and (n <= A)):
+#                 k += 1
+#     if k == 50*50:
 #         print(A)

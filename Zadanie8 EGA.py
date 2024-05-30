@@ -60,14 +60,27 @@
 #                     count += 1
 # print(count)
 
-a = ["А", "В", "Е", "И", "К", "Н", "О", "Р"]
+# a = ["А", "В", "Е", "И", "К", "Н", "О", "Р"]
+# count = 0
+# for i in range(0, len(a)):
+#     for j in range(0, len(a)):
+#         for g in range(0, len(a)):
+#             s = a[i] + a[j] + a[g]
+#             if s.count('В') == 1:
+#                 count += 1
+#                 if s.count('А') == 0:
+#                     print(count)  # Возьмём первое число, которое выдаст программа
+#                     break
+flag = False
 count = 0
-for i in range(0, len(a)):
-    for j in range(0, len(a)):
-        for g in range(0, len(a)):
-            s = a[i] + a[j] + a[g]
-            if s.count('В') == 1:
-                count += 1
-                if s.count('А') == 0:
-                    print(count)  # Возьмём первое число, которое выдаст программа
-                    break
+for x in range(256, 16**3):
+    flag = False
+    x = str(x)
+    for i in range(1,len(x)):
+        if x.count(x[i-1]) == 1 and x.count(x[i]) == 1 and int(x[i-1]) % 2 != int(x[i]) % 2:
+            flag = True
+        else:
+            flag = False
+            break
+    if flag:
+        count += 1

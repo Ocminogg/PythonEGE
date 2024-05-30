@@ -61,23 +61,25 @@
 #         a.append(x-i)
 # print(len(a))
 
+# R = 0
+# maxR = 0
+# for n in range(103):
+#     n = bin(n)[2:]
+#     if n[len(n)-1] == '0':
+#         n = n + '10'
+#     else:
+#         n = n + '01'
+#     R = int(n,2)
+#     if R < 102:
+#         maxR = max(maxR,R)
+# print(maxR)
 
-import turtle as t
-t.left(90)
-t.speed(0)
-k = 30
-x = 4
-t.down()
-for i in range(4):
-    t.forward(x * k)
-    t.right(90)
-    t.forward(x * k)
-    t.left(90)
-    t.forward(x * k)
-    t.right(90)
-t.up()
-for i in range(0, 3 * x + 1):
-    for y in range(-x, 2 * x + 1):
-        t.goto(i * k, y * k)
-        t.dot()
-t.mainloop()
+x = 100
+troichka = ""
+while x != 0:
+    troichka = troichka + str(x % 3)
+    x = x // 3
+troichka = troichka[::-1]
+print(troichka)
+print(int(troichka,3))
+print(int("10211",3))

@@ -5,12 +5,13 @@
 #             for w in range(2):
 #                 if ((x and w) or (w and z)) == ((z <= y) and (y <= x)):
 #                     print(x, y, z, w)  # Вывод программы
+
 print("x y z w")
-for x in range(2):
-    for y in range(2):
-        for z in range(2):
-            for w in range(2):
-                if ((x and not y) or (y == z) or not w) == 0:
+for x in range(0, 2):
+    for y in range(0, 2):
+        for z in range(0, 2):
+            for w in range(0, 2):
+                if ((x and y) or (y and z)) == ((x <= w) and (w <=z)):
                     print(x, y, z, w)
 
 

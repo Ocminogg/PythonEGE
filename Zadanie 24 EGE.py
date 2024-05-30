@@ -182,3 +182,19 @@
 #             if int(word) % 2627 == 0 and is_prime(summ):
 #                 print(word, int(word) // 2627)
 
+file = open('24.txt').readline()
+count = 0
+maxcount = 0
+gl = ['A', 'O']
+sgl = ['C', 'D', 'F']
+for i in range(len(file)):
+    if (file[i] in gl) and (file[i + 1] in gl) and (file[i + 2] in sgl):
+        count += 0
+    elif (file[i] in gl) and (file[i - 1] in gl) and (file[i + 1] in sgl):
+        count += 0
+    elif (file[i] in sgl) and (file[i - 1] in gl) and (file[i - 2] in gl):
+        count += 1
+    else:
+        maxcount = max(maxcount, count)
+        count = 0
+print(maxcount)

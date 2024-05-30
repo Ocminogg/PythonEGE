@@ -148,8 +148,10 @@
 #         delitel_array.clear()
 #     count_d = 0
 
-from fnmatch import *
-for x in range(12046009,129999946999):
-    if x % 98591 == 0:
-        if fnmatch(str(x), '12?*46??9'):
-            print(x,x / 98591)
+# from fnmatch import *
+# for x in range(12046009,129999946999):
+#     if x % 98591 == 0:
+#         if fnmatch(str(x), '12?*46??9'):
+#             print(x,x / 98591)
+
+
