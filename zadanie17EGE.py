@@ -134,3 +134,17 @@
 # print(avrg)
 # for i in range(len(docum)):
 #     if docum[i] % 5 == 0 or docum[i+1] % 5 == 0:
+
+# docum = open("C:\\Users\\User\\Desktop\\17 (2).txt").readlines()
+# for i in range(len(docum)):
+#     docum[i] = int(docum[i])
+count = 0
+maxSum = 0
+docum = [int(i) for i in open("C:\\Users\\User\\Desktop\\17 (2).txt").readlines()]
+print(docum)
+for i in range(len(docum)):
+    for j in range(i+1,len(docum)):
+        if (docum[i] + docum[j]) % 9 == 0:
+            count += 1
+            maxSum = max(maxSum, docum[i] + docum[j])
+print(count, maxSum)

@@ -51,14 +51,19 @@
 
 
 
-# for x in '0123456789AB':
-#     for y in '0123456789AB':
-#         t = int(y + 'AA' + x, 12) + int(x + '02' + y, 14)
-#         if t % 80 == 0:
-#             print(t // 80)
+# for x in '0123456789ABC':
+#     for y in '0123456789ABC':
+#         t = int("8" + x + '78' + y, 13) + int("79" + x + y + '7', 18)
+#         if t % 9 == 0:
+#             print(t // 9)
 #             break
-#     if t % 80 == 0:
-#         break
+result_search = []
+for x in '0123456789ABC':
+    for y in '0123456789ABC':
+        t = int('8' + x + '78' + y, 13) + int('79' + x + y + '7', 18)
+        if t % 9 == 0:
+            result_search.append(t)
+print(min(result_search) // 9)
 
 # print(122**0.5)
 # print(int(122**0.5))
@@ -91,7 +96,7 @@
 # L=3*2**23/0.8
 # k=1080*920
 # print(L/k-i)
-
+# print(oct(10)[2:] + " это двоичный код 10")
 
 
 

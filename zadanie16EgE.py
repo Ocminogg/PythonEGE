@@ -139,14 +139,29 @@ from functools import *
 # # ответ - количество ограниченных последовательностей необходимой длины
 # print(f(0, len(a), 1))
 
+# def F(n):
+#     if n <= 1:
+#         return 0
+#     if n > 1 and n % 2 == 1:
+#         return F(n - 1) + 3 * n**2
+#     if n > 1 and n % 2 == 0:
+#         return n/2 + F(n-1) + 2
+# # n = 0
+# # while F(n) != 11:
+# #     n += 1
+# print(F(49))
+
 def F(n):
-    if n == 0:
-        return 0
-    if n > 0 and n % 2 == 0:
-        return F(n / 2)
-    if n % 2 == 1:
-        return 1 + F(n-1)
-n = 0
-while F(n) != 11:
-    n += 1
-print(n)
+    if n > 10**6:
+        return n
+    if n <= 10 ** 6:
+        return n + F(2 * n)
+def G(n):
+    return F(n) / n
+
+G = G(1000)
+
+# for i in range(1,2000):
+
+
+print(len([1 for i in range(1, 2000) if (F(i) / i) == G]))

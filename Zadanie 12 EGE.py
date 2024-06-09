@@ -1,26 +1,28 @@
-s = 68 * "8"
-while '222' in s or '888' in s:
-    if '222' in s:
-        s = s.replace("222","8",1)
-    else:
-        s = s.replace("888", "2", 1)
-print(s)
+# s = ""
+# for i in range(60, 100):
+#     s = "1" * i
+#     while '111' in s:
+#         s = s.replace("111", "2", 1)
+#         s = s.replace("222", "1", 1)
+#     if s == "221":
+#         print(i)
 
-# for n in range(1, 100):
-#     SUM = 0
-#     s = '3' + (n * '5')
-#     while ('25' in s) or ('355' in s) or ('555' in s):
-#         if ('25' in s):
-#             s = s.replace('25', '3', 1)
-#         if ('355' in s):
-#             s = s.replace('355', '52', 1)
-#         if ('555' in s):
-#             s = s.replace('555', '23', 1)
-#     for i in s:
-#         SUM += int(i)
-#     if SUM == 27:
-#         print(n)
-#         break
+
+for n in range(1, 100):
+    SUM = 0
+    s = '3' + (n * '5')
+    while ('25' in s) or ('355' in s) or ('555' in s):
+        if ('25' in s):
+            s = s.replace('25', '3', 1)
+        if ('355' in s):
+            s = s.replace('355', '52', 1)
+        if ('555' in s):
+            s = s.replace('555', '23', 1)
+    for i in s:
+        SUM += int(i)
+    if SUM == 27:
+        print(n)
+        break
 
 # s = "0" +'1' * 0 + '2' * 3 + "0"
 # poisk = "1" *36 + "2" * 30

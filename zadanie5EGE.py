@@ -73,13 +73,22 @@
 #     if R < 102:
 #         maxR = max(maxR,R)
 # print(maxR)
+# N = "123456789"
+# print(N[-3:])
+Nbin = ""
+R = 0
+ArrayR = []
+for N in range(1,200):
+    Nbin = bin(N)[2:]
+    if N % 3 == 0:
+        Nbin = Nbin + Nbin[-3:]
+    else:
+        Nbin = Nbin + bin((N % 3) * 3)[2:]
+    R = int(Nbin, 2)
+    if R > 151:
+        ArrayR.append(R)
+print(min(ArrayR))
+print('Индекс искомого числа в массиве ',ArrayR.index(min(ArrayR)))
+print(ArrayR)
 
-x = 100
-troichka = ""
-while x != 0:
-    troichka = troichka + str(x % 3)
-    x = x // 3
-troichka = troichka[::-1]
-print(troichka)
-print(int(troichka,3))
-print(int("10211",3))
+

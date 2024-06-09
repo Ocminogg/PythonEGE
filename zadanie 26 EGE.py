@@ -295,14 +295,14 @@
 
 
 
-docum = open("26 (2).txt").readlines()
-docum.remove(docum[0])
+# docum = open("26.txt").readlines()
+# docum.remove(docum[0])
 # print(docum)
 
-for i in range(len(docum)):
-    docum[i] = docum[i].split(" ")
-    docum[i][0] = int(docum[i][0])
-    docum[i][1] = int(docum[i][1])
+# for i in range(len(docum)):
+#     docum[i] = docum[i].split(" ")
+#     docum[i][0] = int(docum[i][0])
+#     docum[i][1] = int(docum[i][1])
 # print(docum)
 
 # print(docum)
@@ -312,24 +312,55 @@ for i in range(len(docum)):
 # print(max(docum))
 # print(docum[2861])
 
-DocumSort = []
-while len(docum) != 0:
-    DocumSort.append(max(docum))
-    docum.remove(max(docum))
-print(DocumSort)
+# DocumSort = []
+# while len(docum) != 0:
+#     DocumSort.append(max(docum))
+#     docum.remove(max(docum))
+# print(DocumSort)
+#
+# first = [0,0]
+# second = [0,0]
+# third = [0,0]
+# z = []
+# # print(first,second,third)
+# for i in range(len(DocumSort)):
+#     first = [DocumSort[i][0],DocumSort[i][1] - 1] #Свободное
+#     second = [DocumSort[i][0], DocumSort[i][1] - 2] #Свободное
+#     third = [DocumSort[i][0], DocumSort[i][1] - 3] #Занятое
+#     # print(first,second,third)
+#     if (first not in DocumSort) and (second not in DocumSort) and (third in DocumSort):
+#         print(second)
+#         break
+#     else:
+#         continue
 
-first = [0,0]
-second = [0,0]
-third = [0,0]
-z = []
-# print(first,second,third)
-for i in range(len(DocumSort)):
-    first = [DocumSort[i][0],DocumSort[i][1] - 1] #Свободное
-    second = [DocumSort[i][0], DocumSort[i][1] - 2] #Свободное
-    third = [DocumSort[i][0], DocumSort[i][1] - 3] #Занятое
-    # print(first,second,third)
-    if (first not in DocumSort) and (second not in DocumSort) and (third in DocumSort):
-        print(second)
-        break
-    else:
-        continue
+docum = open("26.txt").readlines()
+docum.remove(docum[0])
+for i in range(len(docum)):
+    docum[i] = docum[i].split()
+    docum[i][0] = int(docum[i][0])
+    docum[i][1] = int(docum[i][1])
+    # if docum[i][0] == 100000:
+    #     print(docum[i])
+docum = sorted(docum)
+print(docum)
+ArrayByLine = []
+
+# f = open('26.txt').readlines()[1:]
+# Sl = {i: [] for i in range(1, 10 ** 5 + 1)}
+#
+# for i in f:
+#     ind, v = map(int, i.split())
+#     Sl[ind] += [v]
+#
+#
+# def func(v):
+#     st = ''
+#     for x, y in zip(v, v[1:]):
+#         st += '*' if x + 1 == y else '* '
+#     return len([1 for s in (st + '*').split() if len(s) >= 3])
+#
+#
+# Sl = {i: func(sorted(set(v))) for i, v in Sl.items()}
+# print((t := max(Sl.values())), \
+#       list(Sl.keys())[::-1][list(Sl.values())[::-1].index(t)])

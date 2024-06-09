@@ -182,19 +182,48 @@
 #             if int(word) % 2627 == 0 and is_prime(summ):
 #                 print(word, int(word) // 2627)
 
-file = open('24.txt').readline()
+# file = open('24 (2).txt').readlines()
+# minG = 100000
+# bufferstroka = ''
+# befferletter = 'A'
+# maxi = 0
+# for i in range(len(file)):
+#     file[i] = file[i].replace("\n",'')
+#
+# for stroka in file:
+#     if minG > stroka.count('G'):
+#         minG = stroka.count('G')
+#         bufferstroka = stroka
+# print(bufferstroka, minG)
+#
+# for letter in bufferstroka:
+#     if maxi < bufferstroka.count(letter):
+#         maxi = bufferstroka.count(letter)
+#         befferletter = letter
+#     elif maxi == bufferstroka.count(letter) and befferletter < letter:
+#         befferletter = letter
+# print(maxi, befferletter)
+
+stroka = open('24_demo.txt').readline()
+i=0
 count = 0
-maxcount = 0
-gl = ['A', 'O']
-sgl = ['C', 'D', 'F']
-for i in range(len(file)):
-    if (file[i] in gl) and (file[i + 1] in gl) and (file[i + 2] in sgl):
-        count += 0
-    elif (file[i] in gl) and (file[i - 1] in gl) and (file[i + 1] in sgl):
-        count += 0
-    elif (file[i] in sgl) and (file[i - 1] in gl) and (file[i - 2] in gl):
-        count += 1
-    else:
-        maxcount = max(maxcount, count)
+maxi = 0
+while i != len(stroka) - 2:
+    if (stroka[i] + stroka[i+1] + stroka[i+2]) == "XYZ":
+        count += 3
+        i += 3
+        maxi = max(maxi,count)
+    elif (stroka[i] + stroka[i+1]) == "XY":
+        count += 2
+        maxi = max(maxi, count)
         count = 0
-print(maxcount)
+        i += 2
+    elif (stroka[i]) == "X":
+        count += 1
+        maxi = max(maxi, count)
+        count = 0
+        i += 1
+    else:
+        count = 0
+        i += 1
+print(maxi)
