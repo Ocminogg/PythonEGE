@@ -134,26 +134,49 @@
 #         dot(1, 'white')
 # mainloop()
 
-import turtle
-t=turtle.Turtle()
-t.reset()
-t.seth(90)
-t.width(2)
-t.speed(20)
-k = 10 #коэффициент для увеличения масштаба
-for i in range(5):
-    t.right(90)
-    t.circle(5*k,180)
-    t.right(90)
-    t.circle(5*k,180)
-    t.right(90)
-    t.circle(5*k,180)
-    t.right(90)
-    t.circle(5*k,180)
-t.penup()
-for x in range(-15,6,1):
-    for y in range(-5,16):
-        t.goto(x*k , y*k )
-        t.dot(5)
-t.penup()
-turtle.mainloop()
+# import turtle
+# t=turtle.Turtle()
+# t.reset()
+# t.seth(90)
+# t.width(2)
+# t.speed(20)
+# k = 10 #коэффициент для увеличения масштаба
+# for i in range(5):
+#     t.right(90)
+#     t.circle(5*k,180)
+#     t.right(90)
+#     t.circle(5*k,180)
+#     t.right(90)
+#     t.circle(5*k,180)
+#     t.right(90)
+#     t.circle(5*k,180)
+# t.penup()
+# for x in range(-15,6,1):
+#     for y in range(-5,16):
+#         t.goto(x*k , y*k )
+#         t.dot(5)
+# t.penup()
+# turtle.mainloop()
+
+from turtle import *
+left(90)
+k = 30
+tracer(0)
+up()
+goto(0 * k, 0 * k)
+down()
+x = 6
+for i in range(4):
+    forward(x * k)
+    right(90)
+    forward(x * k)
+    left(90)
+    forward(x * k)
+    right(90)
+up()
+for x in range(-12, 20):
+    for y in range(-12, 20):
+        goto(x * k, y * k)
+        dot(2,'red')
+        dot(4,'green')
+mainloop()

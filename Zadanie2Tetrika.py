@@ -6,13 +6,13 @@
 #                 if ((x and w) or (w and z)) == ((z <= y) and (y <= x)):
 #                     print(x, y, z, w)  # Вывод программы
 
-print("x y z w")
-for x in range(0, 2):
-    for y in range(0, 2):
-        for z in range(0, 2):
-            for w in range(0, 2):
-                if ((x and y) or (y and z)) == ((x <= w) and (w <=z)):
-                    print(x, y, z, w)
+
+# print("Матвей " * 5)
+
+# for x in range(2):
+#     for y in range(2):
+#         print(x,y)
+
 
 
 # a = 5
@@ -26,12 +26,13 @@ for x in range(0, 2):
 #     print(word)
 
 #
-# print("x y z w")
-# for x in range(0, 2):
-#     for y in range(0, 2):
-#         for z in range(0, 2):
-#             for w in range(0, 2):
-#                 print(x, y, z, w)
+print("x y z w")
+for x in range(0, 2):
+    for y in range(0, 2):
+        for z in range(0, 2):
+            for w in range(0, 2):
+                if((x == (w or y)) or ((w <= z) and (y <= w))) == 0:
+                   print(x, y, z, w)
 
 # for i in range(2):
 #     for j in range(2):

@@ -204,26 +204,82 @@
 #         befferletter = letter
 # print(maxi, befferletter)
 
-stroka = open('24_demo.txt').readline()
-i=0
-count = 0
-maxi = 0
-while i != len(stroka) - 2:
-    if (stroka[i] + stroka[i+1] + stroka[i+2]) == "XYZ":
-        count += 3
-        i += 3
-        maxi = max(maxi,count)
-    elif (stroka[i] + stroka[i+1]) == "XY":
-        count += 2
-        maxi = max(maxi, count)
-        count = 0
-        i += 2
-    elif (stroka[i]) == "X":
-        count += 1
-        maxi = max(maxi, count)
-        count = 0
-        i += 1
-    else:
-        count = 0
-        i += 1
-print(maxi)
+# stroka = open('24_demo.txt').readline()
+# i=0
+# count = 0
+# maxi = 0
+# while i != len(stroka) - 2:
+#     if (stroka[i] + stroka[i+1] + stroka[i+2]) == "XYZ":
+#         count += 3
+#         i += 3
+#         maxi = max(maxi,count)
+#     elif (stroka[i] + stroka[i+1]) == "XY":
+#         count += 2
+#         maxi = max(maxi, count)
+#         count = 0
+#         i += 2
+#     elif (stroka[i]) == "X":
+#         count += 1
+#         maxi = max(maxi, count)
+#         count = 0
+#         i += 1
+#     else:
+#         count = 0
+#         i += 1
+# print(maxi)
+
+# f = open("C:\\Users\\User\\Downloads\\24 (2).txt").readline()
+# k = 0
+# m = 0
+# # f = f.replace("KL", "*")
+# # print(f)
+# for i in range(len(f) - 1):
+#     if (f[i] + f[i+1] == 'KL') or (f[i-1] + f[i] == 'KL') or (f[i] + f[i+1] == 'LK') or (f[i-1] + f[i] == 'LK'):
+#         k += 1
+#         m = max(m, k)
+#         k = 1
+#     else:
+#         k += 1
+# print(m)
+#
+# k = 1
+# mx = 0
+# for i in range(1, len(f)):
+#     if (f[i] == 'K' and f[i-1] == 'L') or (f[i-1] == 'K' and f[i] == 'L'):
+#         k = 1
+#     else:
+#         k += 1
+#         if k > mx:
+#             mx = k
+# print(mx)
+
+# t = open("C:\\Users\\User\\Downloads\\24 (2).txt").readline().replace("LK", "L/K").replace("KL", "K/L")
+# maximum = 0
+# counter = 0
+# for i in range(len(t)):
+#     if t[i] != "/":
+#         counter += 1
+#     else:
+#         maximum = max(maximum, counter)
+#         counter = 0
+# print(maximum)
+
+# f = open('C:\\Users\\User\\Downloads\\24 (3).txt').readline()
+# s = f.split('D')
+# m = 0
+# k = 0
+# res = []
+# for i in range(len(s)):
+#     if s[i].count('O') != 2:
+#         res.append(s[i])
+# for j in res:
+#     m = max(m, len(j))
+# print(m)
+
+# s = "9" * 1000
+# while ("999" in s) or ("888" in s):
+#     if "888" in s :
+#         s = s.replace ("888", "9", 1)
+#     else:
+#         s = s.replace ("999", "8", 1)
+# print(s)

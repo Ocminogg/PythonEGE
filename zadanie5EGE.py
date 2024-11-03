@@ -75,20 +75,52 @@
 # print(maxR)
 # N = "123456789"
 # print(N[-3:])
-Nbin = ""
-R = 0
-ArrayR = []
-for N in range(1,200):
-    Nbin = bin(N)[2:]
-    if N % 3 == 0:
-        Nbin = Nbin + Nbin[-3:]
-    else:
-        Nbin = Nbin + bin((N % 3) * 3)[2:]
-    R = int(Nbin, 2)
-    if R > 151:
-        ArrayR.append(R)
-print(min(ArrayR))
-print('Индекс искомого числа в массиве ',ArrayR.index(min(ArrayR)))
-print(ArrayR)
+# Nbin = ""
+# R = 0
+# ArrayR = []
+# for N in range(1,200):
+#     Nbin = bin(N)[2:]
+#     if N % 3 == 0:
+#         Nbin = Nbin + Nbin[-3:]
+#     else:
+#         Nbin = Nbin + bin((N % 3) * 3)[2:]
+#     R = int(Nbin, 2)
+#     if R > 151:
+#         ArrayR.append(R)
+# print(min(ArrayR))
+# print('Индекс искомого числа в массиве ',ArrayR.index(min(ArrayR)))
+# print(ArrayR)
+
+# for N in range(128, 256):
+#     s = bin(N)[2:]
+#     s = s.replace("1", "2")
+#     s = s.replace("0", "1")
+#     s = s.replace("2", "0")
+#     res = int(s,2)
+#     sub = N - res
+#     if sub == 105:
+#         print(N)
+
+# A = []
+# for N in range(10000, 100000):
+#     # first
+#     s = oct(N)[2:]
+#     for i in range(len(s)):
+#         if int(s[i]) % 2 != 0:
+#             s = s.replace(s[i],"2")
+#     s = s + str(N % 8)
+#     res = int(s, 8)
+#     # second
+#     s = oct(res)[2:]
+#     for i in range(len(s)):
+#         if int(s[i]) % 2 != 0:
+#             s = s.replace(s[i], "2")
+#     s = s + str(N % 8)
+#     res = int(s, 8)
+#     # final
+#     if res % 2023 == 0:
+#         A.append(N)
+# print(sum(A))
+
 
 

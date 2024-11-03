@@ -100,7 +100,7 @@
 
 
 
-path = 'C:\\Users\\User\\Downloads\\17.txt' # для Windows
+# path = 'C:\\Users\\User\\Downloads\\17.txt' # для Windows
 #
 # docum = open(path).readlines()
 # print(docum)
@@ -121,30 +121,30 @@ path = 'C:\\Users\\User\\Downloads\\17.txt' # для Windows
 
 
 
-path = 'D:\\TetrikaPython\\27_A.txt' # для Windows
-
-docum = open(path).readlines()
-print(docum)
-docum.remove(docum[0])
-
-for i in range(len(docum)):
-    docum[i] = docum[i].split(' ')
-    docum[i][0] = int(docum[i][0])
-    docum[i][1] = int(docum[i][1])
-    docum[i][2] = int(docum[i][2])
-print(docum)
-SUM = 0
-MINsrediMAX = docum[0]
-
-for i in range(len(docum)):
-    SUM += max(docum[i])
-    if (max(MINsrediMAX) > max(docum[i])):
-        MINsrediMAX = docum[i]
-
-
-print(MINsrediMAX)
-if (SUM % 109 == 0):
-    SUM = SUM - max(MINsrediMAX) + MINsrediMAX[0]
-    print(SUM)
-else:
-    print(SUM)
+# path = 'D:\\TetrikaPython\\27_A.txt' # для Windows
+#
+# docum = open(path).readlines()
+# print(docum)
+# docum.remove(docum[0])
+#
+# for i in range(len(docum)):
+#     docum[i] = docum[i].split(' ')
+#     docum[i][0] = int(docum[i][0])
+#     docum[i][1] = int(docum[i][1])
+#     docum[i][2] = int(docum[i][2])
+# print(docum)
+# SUM = 0
+# MINsrediMAX = docum[0]
+#
+# for i in range(len(docum)):
+#     SUM += max(docum[i])
+#     if (max(MINsrediMAX) > max(docum[i])):
+#         MINsrediMAX = docum[i]
+#
+#
+# print(MINsrediMAX)
+# if (SUM % 109 == 0):
+#     SUM = SUM - max(MINsrediMAX) + MINsrediMAX[0]
+#     print(SUM)
+# else:
+#     print(SUM)

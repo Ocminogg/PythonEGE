@@ -71,16 +71,30 @@
 #                 if s.count('А') == 0:
 #                     print(count)  # Возьмём первое число, которое выдаст программа
 #                     break
-flag = False
+
+# flag = False
+# count = 0
+# for x in range(256, 16**3):
+#     flag = False
+#     x = str(x)
+#     for i in range(1,len(x)):
+#         if x.count(x[i-1]) == 1 and x.count(x[i]) == 1 and int(x[i-1]) % 2 != int(x[i]) % 2:
+#             flag = True
+#         else:
+#             flag = False
+#             break
+#     if flag:
+#         count += 1
+import itertools
+alphabet = "ABCDX"
+ar = itertools.product(alphabet, repeat=4) #Размещение с повторением
+
+arl = []
+for i in ar:
+    arl.append(list(i))
+
 count = 0
-for x in range(256, 16**3):
-    flag = False
-    x = str(x)
-    for i in range(1,len(x)):
-        if x.count(x[i-1]) == 1 and x.count(x[i]) == 1 and int(x[i-1]) % 2 != int(x[i]) % 2:
-            flag = True
-        else:
-            flag = False
-            break
-    if flag:
+for e in arl:
+    if e.count('X') == 1:
         count += 1
+print(count)

@@ -23,7 +23,6 @@
 # print(len(range(123456795, 1234567888)) - a_2 - a_7 + a_14)
 
 
-
 # def F(n):
 #     if n == 0:
 #         return 0
@@ -105,6 +104,7 @@
 
 from functools import *
 
+
 # def F(n):
 #     if n < 10:
 #         return n
@@ -121,7 +121,6 @@ from functools import *
 #     if F(x) == 159:
 #         count += 1
 # print(count)
-
 
 
 # from functools import *
@@ -151,17 +150,29 @@ from functools import *
 # #     n += 1
 # print(F(49))
 
+# def F(n):
+#     if n > 10**6:
+#         return n
+#     if n <= 10 ** 6:
+#         return n + F(2 * n)
+# def G(n):
+#     return F(n) / n
+#
+# G = G(1000)
+#
+# # for i in range(1,2000):
+#
+#
+# print(len([1 for i in range(1, 2000) if (F(i) / i) == G]))
+
 def F(n):
-    if n > 10**6:
-        return n
-    if n <= 10 ** 6:
-        return n + F(2 * n)
-def G(n):
-    return F(n) / n
+    if n == 1:
+        return 1
+    elif n == 2:
+        return 2
+    elif n > 2 and n % 2 == 0:
+        return (4*n - F(n-3)) // 8
+    elif n > 2 and n % 2 == 1:
+        return (4*n - F(n-1) + F(n-2)) // 8
 
-G = G(1000)
-
-# for i in range(1,2000):
-
-
-print(len([1 for i in range(1, 2000) if (F(i) / i) == G]))
+print(F(52) - F(38))

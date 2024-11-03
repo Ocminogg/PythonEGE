@@ -1,15 +1,7 @@
-# a = 48
-# b = 5
-#
-# if a > b:
-#     print('a > b')
-# elif a == b:
-#     print('a = b')
-# elif a < b:
-#     print('a < b')
-# x = 0
-# while x != 10:
-#     x = x + 1
-#     print(x)
-print(bin(208)[2:])
-print(int("11100000", 2))
+print("x y z w")
+for x in range(2):
+    for y in range(2):
+        for z in range(2):
+            for w in range(2):
+                if (((x <= y) == (y <= z)) and (y or w)) == 1:
+                    print(x,y,z,w)
