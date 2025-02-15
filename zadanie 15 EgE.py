@@ -1,3 +1,37 @@
+
+# for A in range(64):
+#     Flag = True
+#     for x in range(64):
+#         if ((x&28==0) and (x&45==0) or (x&17!=0) or (x&A!=0)) == 0:
+#             Flag = False
+#             break
+#     if Flag:
+#         print(A)
+#         break
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # for A in range(0,128,1):
 #     Flag = True
 #     for x in range(128):
@@ -10,26 +44,26 @@
 #         print(A)
 #         break
 
-# P = []
-# Q = []
-# A = []
-# for i in range(5, 31):
-#     P.append(i)
-# for i in range(14, 24):
-#     Q.append(i)
-#
-# for a in range(60):
-#     Flag = True
-#     for x in range(64):
-#         if ((x in P) == (x in Q)) <= (not(x == a)):
-#             Flag = True
-#         else:
-#             Flag = False
-#             break
-#     if Flag == True:
-#         A.append(a)
-# print(A)
-#
+P = []
+Q = []
+A = []
+for i in range(25, 51):
+    P.append(i)
+for i in range(32, 48):
+    Q.append(i)
+ListCount = []
+
+for x1 in range(0, 60):
+    for y in range(x1+1, 60):
+        A = [i for i in range(x1, y)]
+        Flag = True
+        for x in range(0, 101):
+            if (((not (x in A)) <= (x in P)) <= ((x in A) <= (x in Q))) == 0:
+                Flag = False
+        if Flag:
+            ListCount.append(len(A))
+print(ListCount)
+print(max(ListCount) - 1)
 
 # p=[int(i) for i in range(10,30)]
 # q=[int(i) for i in range(13,19)]
@@ -220,30 +254,30 @@
 #             m = max(m,Amax - Amin)
 # print(m - 1)
 # #КОД с РЕШУ ЕГЭ
-list = []
-P = []
-for i in range(30,46):
-    P.append(i)
-Q = []
-for i in range(40,56):
-    Q.append(i)
-# R = []
-# for i in range(5,16):
-#     R.append(i)
-
-for Amin in range(1, 56):
-    for Amax in range(Amin + 1, 57):
-        A = [i for i in range(Amin, Amax)]
-        flag = True
-        for x in range(1, 100):
-            if ((not(x in A)) <= (not(x in P)) and ((x in Q)) <= ((x in A))) == 0:
-                flag = False
-                break
-        if flag == True:
-            print(A)
-            m = Amax - Amin
-            list.append(m)
-print(min(list) - 1)
+# list = []
+# P = []
+# for i in range(30,46):
+#     P.append(i)
+# Q = []
+# for i in range(40,56):
+#     Q.append(i)
+# # R = []
+# # for i in range(5,16):
+# #     R.append(i)
+#
+# for Amin in range(1, 56):
+#     for Amax in range(Amin + 1, 57):
+#         A = [i for i in range(Amin, Amax)]
+#         flag = True
+#         for x in range(1, 100):
+#             if ((not(x in A)) <= (not(x in P)) and ((x in Q)) <= ((x in A))) == 0:
+#                 flag = False
+#                 break
+#         if flag == True:
+#             print(A)
+#             m = Amax - Amin
+#             list.append(m)
+# print(min(list) - 1)
 
 # testList = []
 # list = []

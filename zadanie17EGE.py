@@ -138,13 +138,115 @@
 # docum = open("C:\\Users\\User\\Desktop\\17 (2).txt").readlines()
 # for i in range(len(docum)):
 #     docum[i] = int(docum[i])
-count = 0
-maxSum = 0
-docum = [int(i) for i in open("C:\\Users\\User\\Desktop\\17 (2).txt").readlines()]
-print(docum)
-for i in range(len(docum)):
-    for j in range(i+1,len(docum)):
-        if (docum[i] + docum[j]) % 9 == 0:
-            count += 1
-            maxSum = max(maxSum, docum[i] + docum[j])
-print(count, maxSum)
+
+# count = 0
+# maxSum = 0
+# docum = [int(i) for i in open("C:\\Users\\User\\Desktop\\17 (2).txt").readlines()]
+# print(docum)
+# for i in range(len(docum)):
+#     for j in range(i+1,len(docum)):
+#         if (docum[i] + docum[j]) % 9 == 0:
+#             count += 1
+#             maxSum = max(maxSum, docum[i] + docum[j])
+# print(count, maxSum)
+
+# docum = [int(i) for i in open("C:\\Users\\User\\Downloads\\17 (3).txt").readlines()]
+
+# path = "C:\\Users\\User\\Downloads\\17 (3).txt"
+# docum = open(path)
+# print(docum)
+#
+# docum = docum.readlines()
+# print(docum)
+#
+# for i in range(len(docum)):
+#     docum[i] = int(docum[i])
+# print(docum)
+#
+# count = 0
+# MAXSUM = 0
+#
+# for i in range(len(docum)):
+#     for j in range(i+1, len(docum)):
+#         if docum[i] % 160 != docum[j] % 160:
+#             if docum[i] % 7 == 0 or docum[j] % 7 == 0:
+#                  count += 1
+#                  MAXSUM = max(MAXSUM,docum[i] + docum[j])
+# print(count, MAXSUM)
+
+# for x in '0123456789ABCDE':
+#     s = int(x + 'B09', 17) + int(x + '8E8', 15)
+#     if s % 155 == 0:
+#         print(s // 155)
+#         break
+
+
+# docum = open("C:\\Users\\User\\Downloads\\17 (4).txt").readlines()
+#
+# for i in range(len(docum)):
+#     docum[i] = int(docum[i])
+#
+# count = 0
+# SUM = 0
+# for i in range(len(docum)):
+#     for j in range(i+1, len(docum)):
+#         if (docum[i] * docum[j]) % 34 != 0:
+#             count += 1
+#             SUM = max(docum[i] + docum[j], SUM)
+#
+# print(count, SUM)
+
+# N = int(input())
+# SUM = 0
+# for i in range(N):
+#     x = int(input())
+#     if x % 3 == 0:
+#         SUM += x
+# print(SUM)
+
+# x = 1757
+# print(x % 10)
+
+# n = int(input())
+# SUM = 0
+# for i in range(n):
+#     x = int(input())
+#     if x % 10 == 4:
+#         SUM += x
+# print(SUM)
+
+# SUM = 0
+# x = 1
+# while x != 0:
+#     x = int(input())
+#     if (x % 6 == 0) and (x % 10 == 4):
+#         SUM += x
+# print(SUM)
+
+# n = int(input())
+# MAX = 0
+# LowSpeed = "NO"
+# for i in range(n):
+#     x = int(input())
+#     if x < 30 and LowSpeed == "NO":
+#         LowSpeed = "YES"
+#     MAX = max(MAX, x)
+# print(MAX)
+# print(LowSpeed)
+#
+# n = int(input())
+# x = 1
+# SUM = 0
+# Minus = 0
+# Plus = 0
+# while x != 0:
+
+# n = int(input())
+# COUNT = 0
+# for i in range(n):
+#     x = int(input())
+#     if x % 3 == 0:
+#         COUNT += 1
+# print(COUNT)
+
+print(bin(10)[2::])
