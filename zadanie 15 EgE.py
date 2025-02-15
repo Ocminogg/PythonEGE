@@ -10,28 +10,6 @@
 #         break
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # for A in range(0,128,1):
 #     Flag = True
 #     for x in range(128):
@@ -44,26 +22,26 @@
 #         print(A)
 #         break
 
-P = []
-Q = []
-A = []
-for i in range(25, 51):
-    P.append(i)
-for i in range(32, 48):
-    Q.append(i)
-ListCount = []
-
-for x1 in range(0, 60):
-    for y in range(x1+1, 60):
-        A = [i for i in range(x1, y)]
-        Flag = True
-        for x in range(0, 101):
-            if (((not (x in A)) <= (x in P)) <= ((x in A) <= (x in Q))) == 0:
-                Flag = False
-        if Flag:
-            ListCount.append(len(A))
-print(ListCount)
-print(max(ListCount) - 1)
+# P = []
+# Q = []
+# A = []
+# for i in range(25, 51):
+#     P.append(i)
+# for i in range(32, 48):
+#     Q.append(i)
+# ListCount = []
+#
+# for x1 in range(0, 60):
+#     for y in range(x1+1, 60):
+#         A = [i for i in range(x1, y)]
+#         Flag = True
+#         for x in range(0, 101):
+#             if (((not (x in A)) <= (x in P)) <= ((x in A) <= (x in Q))) == 0:
+#                 Flag = False
+#         if Flag:
+#             ListCount.append(len(A))
+# print(ListCount)
+# print(max(ListCount) - 1)
 
 # p=[int(i) for i in range(10,30)]
 # q=[int(i) for i in range(13,19)]
@@ -353,3 +331,21 @@ print(max(ListCount) - 1)
 #         print(A)
 #         print(len(A))
 #         break
+MassivA = []
+MassivLenA = []
+for Ax in range(-20,30):
+    for Ay in range(-20,30):
+        A = [i for i in range(Ax, Ay)]
+
+        flag = True
+        for x in range(-30,100):
+            if (((x in A) <= (x**2 <= 100)) and ((x**2 <= 64) <= (x in A))) == 0:
+                flag = False
+                break
+        if flag:
+            MassivA.append(A)
+            MassivLenA.append(len(A))
+for elem in MassivA:
+    print(elem, len(elem) - 1)
+
+
