@@ -160,17 +160,18 @@
 
 from turtle import *
 left(90)
-k = 60
+k = 100
 tracer(0)
 #region Рисуем клетки
 up()
+# по вертикали
 pencolor('black')
 for x in range(-12, 20):
     for y in range(-12, 20):
         goto(x * k, y * k)
         down()
     up()
-
+# по горизонатли
 pencolor('black')
 for y in range(-12, 20):
     for x in range(-12, 20):
@@ -180,9 +181,10 @@ for y in range(-12, 20):
 #endregion
 
 up()
-goto(0 * k, -10 * k)
+goto(-10 * k, -5 * k)
 down()
 
+pensize(1)
 #region Команды из задания
 pencolor('red')
 for i in range(4):
