@@ -331,21 +331,21 @@
 #         print(A)
 #         print(len(A))
 #         break
-MassivA = []
-MassivLenA = []
-for Ax in range(-20,30):
-    for Ay in range(-20,30):
-        A = [i for i in range(Ax, Ay)]
 
-        flag = True
-        for x in range(-30,100):
-            if (((x in A) <= (x**2 <= 100)) and ((x**2 <= 64) <= (x in A))) == 0:
-                flag = False
-                break
-        if flag:
-            MassivA.append(A)
-            MassivLenA.append(len(A))
-for elem in MassivA:
-    print(elem, len(elem) - 1)
-
+# MassivA = []
+# MassivLenA = []
+# for Ax in range(-20,30):
+#     for Ay in range(-20,30):
+#         A = [i for i in range(Ax, Ay)]
+#
+#         flag = True
+#         for x in range(-30,100):
+#             if (((x in A) <= (x**2 <= 100)) and ((x**2 <= 64) <= (x in A))) == 0:
+#                 flag = False
+#                 break
+#         if flag:
+#             MassivA.append(A)
+#             MassivLenA.append(len(A))
+# for elem in MassivA:
+#     print(elem, len(elem) - 1)
 

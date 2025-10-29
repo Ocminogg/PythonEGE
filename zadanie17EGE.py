@@ -249,4 +249,23 @@
 #         COUNT += 1
 # print(COUNT)
 
-print(bin(10)[2::])
+# print(bin(10)[2::])
+
+docum = open("C:\\Users\\User\\Downloads\\17 (6).txt").readlines()
+
+for i in range(len(docum)):
+    docum[i] = int(docum[i])
+
+min_sp = 0
+for i in range(len(docum)):
+    if abs(docum[i]) % 10 == 7:
+        min_sp = min(min_sp, docum[i])
+
+count = 0
+max_sum = 0
+for i in range(len(docum) - 1):
+    if ((abs(docum[i]) % 10 == 7) and (abs(docum[i+1]) % 10 != 7)) or ((abs(docum[i]) % 10 != 7) and (abs(docum[i+1]) % 10 == 7)):
+        if ((docum[i]**2 + docum[i+1]**2) < min_sp**2):
+            count += 1
+            max_sum = max(max_sum, (docum[i]**2 + docum[i+1]**2))
+print(count,max_sum)

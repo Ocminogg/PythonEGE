@@ -165,14 +165,20 @@ from functools import *
 #
 # print(len([1 for i in range(1, 2000) if (F(i) / i) == G]))
 
-def F(n):
-    if n == 1:
-        return 1
-    elif n == 2:
-        return 2
-    elif n > 2 and n % 2 == 0:
-        return (4*n - F(n-3)) // 8
-    elif n > 2 and n % 2 == 1:
-        return (4*n - F(n-1) + F(n-2)) // 8
+# def F(n):
+#     if n == 1:
+#         return 1
+#     elif n == 2:
+#         return 2
+#     elif n > 2 and n % 2 == 0:
+#         return (4*n - F(n-3)) // 8
+#     elif n > 2 and n % 2 == 1:
+#         return (4*n - F(n-1) + F(n-2)) // 8
+#
+# print(F(52) - F(38))
 
-print(F(52) - F(38))
+F = {1 : 1, 2 : 1}
+for n in range(10):
+    if n > 2:
+        F[n] = F[n - 2] + F[n - 1]
+print(F[8])

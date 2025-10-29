@@ -14,7 +14,6 @@
 #         print(x,y)
 
 
-
 # a = 5
 # b = "Привет Мир!\n"
 # # t = a // b
@@ -26,13 +25,13 @@
 #     print(word)
 
 #
-print("x y z w")
-for x in range(0, 2):
-    for y in range(0, 2):
-        for z in range(0, 2):
-            for w in range(0, 2):
-                if((x == (w or y)) or ((w <= z) and (y <= w))) == 0:
-                   print(x, y, z, w)
+# print("x y z w")
+# for x in range(0, 2):
+#     for y in range(0, 2):
+#         for z in range(0, 2):
+#             for w in range(0, 2):
+#                 if ((not (x) == y) and (z <= w)) == 1:
+#                     print(x, y, z, w)
 
 # for i in range(2):
 #     for j in range(2):
@@ -47,3 +46,12 @@ for x in range(0, 2):
 #     print(A[i])
 # for i in range(len(A)):
 #     print(A[i])
+
+
+print("x y z w")
+for x in range(0, 2):
+    for y in range(0, 2):
+        for z in range(0, 2):
+            for w in range(0, 2):
+                if ((x and (not (y))) or (y == z) or w) == 0:
+                    print(x, y, z, w)

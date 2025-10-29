@@ -1,4 +1,3 @@
-
 # for i in range(33):
 #     N = i
 #     R = 0
@@ -122,5 +121,58 @@
 #         A.append(N)
 # print(sum(A))
 
+# maxR = 0
+# for N in range(123_456_789, 456_789_012):
+#     N_bin = bin(N)[2:]
+#     if N % 2 == 0:
+#         N_bin = "11" + N_bin
+#     else:
+#         N_bin = "1" + N_bin + "10"
+#     maxR = max(int(N_bin,2),maxR)
+# print(maxR)
 
+# for N in range(0, 100):
+#     binN = bin(N)[2:]
+#     sumNum = 0
+#     for num in binN:
+#         sumNum += int(num)
+#     if sumNum % 2 == 0:
+#         s = "10" + s[2:] + '0'
+#     else:
+#         s = "11" + s[2:] + "1"
+#     if int(binN, 2) > 40:
+#         print(N)
+#         break
+count = 0
+startR = 1222222222
+binStart = bin(startR)[2:-5]
 
+endR = 1555555666
+binEnd = bin(endR)[2:-5]
+print(binStart, int(binStart, 2))
+print(binEnd, int(binEnd, 2))
+
+print(bin(0)[2:])
+
+startN = int(binStart, 2)
+endN = int(binEnd, 2)
+for N in range(startN - 1000000, endN + 1000000):
+    binN = bin(N)[2:]
+
+    extra = bin(N % 3)[2:]
+    if len(extra) < 2:
+        extra = "0" + extra
+    binN += extra
+
+    extra = bin(int(binN, 2) % 5)[2:]
+    if len(extra) < 2:
+        extra = "00" + extra
+    elif len(extra) < 3:
+        extra = "0" + extra
+    binN += extra
+
+    R = int(binN, 2)
+    if startR <= R <= endR:
+        count += 1
+
+print(count)#2083335

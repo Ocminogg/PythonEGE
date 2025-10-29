@@ -85,16 +85,29 @@
 #             break
 #     if flag:
 #         count += 1
+
+
+# k = 0
+# for a1 in ("ТИМОФЕЙ"):
+#     for a2 in ("ТИМОФЕЙ"):
+#         for a3 in ("ТИМОФЕЙ"):
+#             for a4 in ("ТИМОФЕЙ"):
+#                 for a5 in ("ТИМОФЕЙ"):
+#                     s = a1+a2+a3+a4+a5
+#                     if s.count("Т") >= 1 and s.count("Й") <= 1:
+#                         k += 1
+# print(k)
+
+
 import itertools
-alphabet = "ABCDX"
-ar = itertools.product(alphabet, repeat=4) #Размещение с повторением
+ar = itertools.product("ТИМОФЕЙ", repeat=5) #Размещение с повторением
 
 arl = []
 for i in ar:
-    arl.append(list(i))
+    arl.append(i)
 
 count = 0
 for e in arl:
-    if e.count('X') == 1:
+    if e.count("Т") >= 1 and e.count("Й") <= 1:
         count += 1
 print(count)

@@ -115,19 +115,19 @@
 
 # from turtle import *
 # left(90)
-# k=30
+# k= 120
 # tracer(0)
 # up()
-# goto(0 * k, -10 * k)
+# goto(0 * k, -3 * k)
 # down()
-# right(315)
-# for i in range(7):
-#     forward(16 * k )
-#     right(45)
-#     forward(8 * k )
-#     right(135)
+#
+# for i in range(4):
+#     forward(12 * k )
+#     right(150)
+#     forward(12 * k )
+#     right(30)
 # up()
-# for x in range (-20, 5):
+# for x in range (-10, 20):
 #     for y in range (-20, 13):
 #         goto(x * k, y * k)
 #         dot(3, 'red')
@@ -158,43 +158,130 @@
 # t.penup()
 # turtle.mainloop()
 
+# from turtle import *
+# left(90)
+# k = 100
+# tracer(0)
+# #region Рисуем клетки
+# up()
+# # по вертикали
+# pencolor('black')
+# for x in range(-12, 20):
+#     for y in range(-12, 20):
+#         goto(x * k, y * k)
+#         down()
+#     up()
+# # по горизонатли
+# pencolor('black')
+# for y in range(-12, 20):
+#     for x in range(-12, 20):
+#         goto(x * k, y * k)
+#         down()
+#     up()
+# #endregion
+#
+# up()
+# goto(-10 * k, -5 * k)
+# down()
+#
+# pensize(1)
+# #region Команды из задания
+# pencolor('red')
+# for i in range(4):
+#     forward(8 * k)
+#     right(90)
+# pencolor('blue')
+# for i in range(3):
+#     forward(12 * k)
+#     right(120)
+# up()
+# #endregion
+#
+# mainloop()
+
+# import turtle
+# t = turtle.Turtle()
+# t.reset()
+# t.seth(90)
+# t.width(2)
+# t.speed(100)
+# k = 10 #коэффициент для увеличения масштаба
+# t.right(180)
+# t.forward(5*k)
+# t.right(90)
+# t.forward(50*k)
+# t.right(90)
+# t.forward(5*k)
+# for i in range(5):
+#     t.seth(90) #поворот на cевер
+#     t.circle(-5*k,180) #рисует на восток
+# t.penup()
+# for x in range(0,-14,-1):
+#     for y in range(-5,8):
+#         t.goto(x*k , y*k )
+#         t.dot(5)
+#
+# # t.seth(90)
+# # t.circle(-5*k,180) #рисует на восток
+# # t.penup()
+# #
+# # t.goto(0*k, 10*k)
+# # t.pendown()
+# # t.seth(90) #поворот на север
+# # t.circle(5*k,180) #рисует на запад
+# turtle.mainloop()
+
+# from turtle import *
+#
+# left(90)
+# k = 80
+# tracer(15)
+# up()
+# goto(-10 * k, 0 * k)
+# down()
+#
+# right(45)
+# for i in range(7):
+#     forward(5 * k)
+#     right(45)
+#     forward(10 * k)
+#     right(135)
+#
+# up()
+# for x in range(-20, 10):
+#     for y in range(-20, 10):
+#         goto(x * k, y * k)
+#         dot(3, 'red')
+# mainloop()
+
 from turtle import *
-left(90)
-k = 100
-tracer(0)
-#region Рисуем клетки
-up()
-# по вертикали
-pencolor('black')
-for x in range(-12, 20):
-    for y in range(-12, 20):
-        goto(x * k, y * k)
-        down()
-    up()
-# по горизонатли
-pencolor('black')
-for y in range(-12, 20):
-    for x in range(-12, 20):
-        goto(x * k, y * k)
-        down()
-    up()
-#endregion
 
-up()
-goto(-10 * k, -5 * k)
-down()
 
-pensize(1)
-#region Команды из задания
-pencolor('red')
+reset()
+seth(90)
+width(2)
+tracer(200)
+k = 45 #коэффициент для увеличения масштаба
+
+penup()
+goto(15*k, 0*k)
+pendown()
+
+right(180)
+forward(2*k)
+right(90)
+forward(40*k)
+right(90)
+forward(2*k)
+
 for i in range(4):
-    forward(8 * k)
-    right(90)
-pencolor('blue')
-for i in range(3):
-    forward(12 * k)
-    right(120)
-up()
-#endregion
+    seth(90) #поворот на cевер
+    circle(-5*k, 180) #рисует на восток
+
+penup()
+for x in range(-100, 20,):
+    for y in range(-10, 10):
+        goto(x*k, y*k)
+        dot(5)
 
 mainloop()
