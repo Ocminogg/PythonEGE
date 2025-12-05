@@ -98,10 +98,45 @@
 # k=1080*920
 # print(L/k-i)
 # print(oct(10)[2:] + " это двоичный код 10")
-SUM = 0
-for x in range(13):
-    SUM = (15**3 * 4 + 15**2 * 12 + 15 * x + 4) + (13**3 * x + 13**2 * 6 + 13 * 2 + 10)
-    if SUM % 121 == 0:
-        print(SUM / 121)
-        print(x)
 
+# SUM = 0
+# for x in range(13):
+#     SUM = (15**3 * 4 + 15**2 * 12 + 15 * x + 4) + (13**3 * x + 13**2 * 6 + 13 * 2 + 10)
+#     if SUM % 121 == 0:
+#         print(SUM / 121)
+#         print(x)
+#
+# count = 0
+# alphabet = sorted('1234567890QWERTYUIOPASDFGHJKLZXCVBNM')
+# for p in range(12,len(alphabet)):
+#     for x in alphabet[1:p]:
+#         for y in alphabet[:p]:
+#             for z in alphabet[1:p]:
+#                 count += 1
+#                 numb1 = int(z+x, p)
+#                 numb2 = int(x+y, p)
+#                 numbres = int(z+y+'B', p)
+#                 intZ = int(z,p)
+#                 intX = int(x,p)
+#                 intY = int(y,p)
+#                 numb1 = intZ * p + intX
+#                 numb2 = intX * p + intY
+#                 numbres = intZ * p ** 2 + intY * p + 11
+#                 if numb1 + numb2 == numbres:
+#                     result = intX * p ** 2 + intY * p + intZ
+#                     print(result)
+#                 if numb1 + numb2 == numbres:
+#                     result = int(x+y+z, p)
+#                     print(result)
+# print("count", count)
+# print("//////////////////////")
+# for p in range(12, 36):
+#     for x in range(1, p):
+#         for y in range(p):
+#             for z in range(1, p):
+#                 numb1 = z * p + x
+#                 numb2 = x * p + y
+#                 numbres = z * p**2 + y * p + 11
+#                 if numb1 + numb2 == numbres:
+#                     result = x * p**2 + y * p + z
+#                     print(result)

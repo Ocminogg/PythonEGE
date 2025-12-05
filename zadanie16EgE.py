@@ -69,22 +69,22 @@
 #         return 2 * F(n - 1) + (n - 2) * F(n - 2)
 # print(F(6))
 
-# import sys
-# sys.setrecursionlimit(10**6)
-# def F(n):
-#     if n < 11:
-#         return 10
-#     else:
-#         return n + F(n - 1)
-# print(F(2124) - F(2122))
-# def F(n):
-#     if n == 1:
-#         return 1
-#     if n % 2 == 0:
-#         return n + F(n-1)
-#     if n > 1 and n % 2 == 1:
-#         return 2*F(n-2)
-# print(F(26))
+import sys
+sys.setrecursionlimit(10**6)
+def F(n):
+    if n < 11:
+        return 10
+    else:
+        return n + F(n - 1)
+print(F(2124) - F(2122))
+def F(n):
+    if n == 1:
+        return 1
+    if n % 2 == 0:
+        return n + F(n-1)
+    if n > 1 and n % 2 == 1:
+        return 2*F(n-2)
+print(F(26))
 
 # from functools import *
 #

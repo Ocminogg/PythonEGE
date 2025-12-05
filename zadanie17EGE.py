@@ -251,21 +251,33 @@
 
 # print(bin(10)[2::])
 
-docum = open("C:\\Users\\User\\Downloads\\17 (6).txt").readlines()
+# docum = [int(i) for i in open("17 (5).txt").readlines()]
+# maxsum = 0
+# count = 0
+# for i in range(len(docum) - 1):
+#     for j in range(i + 1, len(docum)):
+#         num1 = docum[i]
+#         num2 = docum[j]
+#         d = 160
+#         p = 7
+#         if (num1 % d != num2 % d) and (num1 % p == 0 or num2 % p == 0):
+#             count += 1
+#             maxsum = max(maxsum, num1 + num2)
+# print(count, maxsum)
 
-for i in range(len(docum)):
-    docum[i] = int(docum[i])
-
-min_sp = 0
-for i in range(len(docum)):
-    if abs(docum[i]) % 10 == 7:
-        min_sp = min(min_sp, docum[i])
-
-count = 0
-max_sum = 0
-for i in range(len(docum) - 1):
-    if ((abs(docum[i]) % 10 == 7) and (abs(docum[i+1]) % 10 != 7)) or ((abs(docum[i]) % 10 != 7) and (abs(docum[i+1]) % 10 == 7)):
-        if ((docum[i]**2 + docum[i+1]**2) < min_sp**2):
-            count += 1
-            max_sum = max(max_sum, (docum[i]**2 + docum[i+1]**2))
-print(count,max_sum)
+# for i in range(len(docum)):
+#     docum[i] = int(docum[i])
+#
+# min_sp = 0
+# for i in range(len(docum)):
+#     if abs(docum[i]) % 10 == 7:
+#         min_sp = min(min_sp, docum[i])
+#
+# count = 0
+# max_sum = 0
+# for i in range(len(docum) - 1):
+#     if ((abs(docum[i]) % 10 == 7) and (abs(docum[i+1]) % 10 != 7)) or ((abs(docum[i]) % 10 != 7) and (abs(docum[i+1]) % 10 == 7)):
+#         if ((docum[i]**2 + docum[i+1]**2) < min_sp**2):
+#             count += 1
+#             max_sum = max(max_sum, (docum[i]**2 + docum[i+1]**2))
+# print(count,max_sum)
