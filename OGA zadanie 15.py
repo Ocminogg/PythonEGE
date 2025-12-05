@@ -11,6 +11,7 @@
 # else:
 #     print(SUM/count)
 count = 0
+count = 0
 for x in range(10,100):
     if ((x >= 47) and not((x % 4 == 0) and not(x % 8 == 0))) == 0:
         count += 1
