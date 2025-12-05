@@ -1,14 +1,12 @@
-
-# for A in range(64):
+# for A in range(10000):
 #     Flag = True
-#     for x in range(64):
-#         if ((x&28==0) and (x&45==0) or (x&17!=0) or (x&A!=0)) == 0:
+#     for x in range(10000):
+#         if (((x & 5160 > 0) or (x & 3650 > 0)) <= ((x & 9545 == 0) <= (x & A > 0))) == 0:
 #             Flag = False
 #             break
 #     if Flag:
 #         print(A)
 #         break
-
 
 # for A in range(0,128,1):
 #     Flag = True
@@ -320,27 +318,52 @@
 #     if k == 50*50:
 #         print(A)
 
-# p = range(10, 16)
-# q = range(10, 21)
-# r=range(5,16)
-# A = [int(i) for i in range(1, 6)]
-# for x in range(100):
-#     if (((x in A)<=(x in p)))!=(((x in q)<=(x in r))):
+# P = range(160653, 428792)
+# Q = range(265386, 776116)
+# R = range(357752, 897168)
+# A = [int(i) for i in range(160000, 900000)]
+# for x in range(900000):
+#     if ((not(x in A)) <= (((x in P) == (x in Q)) <= ((x in R) == (x in Q)))) == 0:
 #         A = A[1:]
 #     else:
-#         print(A)
+#         # print(A)
 #         print(len(A))
 #         break
 
+# P = range(160653, 428792)
+# Q = range(265386, 776116)
+# R = range(357752, 897168)
+# A = [i for i in range(0, 900000)]
+# for startA in range(0, 900000):
+#     for endA in range(1, 900000):
+#         A = [i for i in range(startA, endA)]
+#         Flag = True
+#         for x in range(900000):
+#             if ((not (x in A)) <= (((x in P) == (x in Q)) <= ((x in R) == (x in Q)))) == 0:
+#                 Flag = False
+#                 break
+#         if Flag:
+#             print(len(A))
+# for A in range(900000):
+#     Flag = True
+#     for x in range(900000):
+#         if ((not (x == A)) <= (((x in P) == (x in Q)) <= ((x in R) == (x in Q)))) == 0:
+#             Flag = False
+#             break
+#     if Flag:
+#         print(A)
+
+# P = range(160653, 428792)
+# Q = range(265386, 776116)
+# R = range(357752, 897168)
 # MassivA = []
 # MassivLenA = []
-# for Ax in range(-20,30):
-#     for Ay in range(-20,30):
+# for Ax in range(100000,897169):
+#     for Ay in range(100001,897169):
 #         A = [i for i in range(Ax, Ay)]
-#
 #         flag = True
 #         for x in range(-30,100):
-#             if (((x in A) <= (x**2 <= 100)) and ((x**2 <= 64) <= (x in A))) == 0:
+#             if ((not (x in A)) <= (((x in P) == (x in Q)) <= ((x in R) == (x in Q)))) == 0:
 #                 flag = False
 #                 break
 #         if flag:
@@ -349,3 +372,12 @@
 # for elem in MassivA:
 #     print(elem, len(elem) - 1)
 
+P = 153697, 780411
+Q = 275071, 904082
+R = 722050, 984086
+
+def f(x):
+    return ((P[0] <= x <= P[1]) == (Q[0] <= x <= Q[1])) <= ((R[0] <= x <= R[1]) == (Q[0] <= x <= Q[1]))
+
+bad = [x for x in range(P[0], R[1] + 1) if not f(x)]
+print(max(bad) - min(bad))
